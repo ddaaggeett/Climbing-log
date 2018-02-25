@@ -11,10 +11,10 @@ _____________________________________________
 - on your mobile device: download the [expo](https://expo.io/) app
 - run the following commands from `command prompt` or `terminal`
 
-    git clone https://github.com/tinysiren/Climbing-log.git
-    cd Climbing-log
-    npm install
-    npm start
+        git clone https://github.com/tinysiren/Climbing-log.git
+        cd Climbing-log
+        npm install
+        npm start
 
 - open expo on your mobile device - scan code desktop screen to open app
 
@@ -22,5 +22,5 @@ _____________________________________________
 
 - open `command prompt` or `terminal` inside `~/Climbing-log` directory and do enter the following:
 
-    git pull
-    npm start
+        git pull
+        npm start
