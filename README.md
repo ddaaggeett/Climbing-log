@@ -20,7 +20,8 @@ _____________________________________________
 
 ## update development copy after any latest [commit](https://github.com/tinysiren/Climbing-log/commits/master)
 
-- open `command prompt` or `terminal` inside `~/Climbing-log` directory and do enter the following:
+- open `command prompt` or `terminal` inside `~/Climbing-log` directory and enter the following:
 
         git pull
+        npm install
         npm start
