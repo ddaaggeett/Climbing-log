@@ -1,23 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { Provider } from 'react-redux'
+import { StackNavigator } from 'react-navigation'
+import * as screens from './src/containers'
+import changefeedListeners from './src/db/changefeed-listeners'
+import configureStore from './src/redux-config/store';
+const store = configureStore();
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
+changefeedListeners(store)
+
+const RootNavigator = StackNavigator({
+	main: {
+		screen: screens.Main,
+	},
+	user: {
+		screen: screens.User,
+	},
+})
+
+export default class App extends Component {
+	constructor(props) {
+		super(props)
+	}
+	render() {
+		return (
+			<Provider store={store}>
+				<RootNavigator {...this.props} />
+			</Provider>
+		)
+	}
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
