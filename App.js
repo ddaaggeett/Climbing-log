@@ -15,6 +15,9 @@ const RootNavigator = StackNavigator({
 	user: {
 		screen: screens.User,
 	},
+	qrscanner: {
+		screen: screens.QRScanner,
+	}
 })
 
 export default class App extends Component {
