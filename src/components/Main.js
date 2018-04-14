@@ -31,6 +31,9 @@ export default class Main extends Component {
     render() {
         return (
             <View style={styles.container}>
+                <Text style={styles.whatPage}>MAIN APP</Text>
+                <Button style={styles.countButton} title="QR Scanner" onPress={() => this.props.navigation.navigate('qrscanner')} />
+                <Text style={styles.whatPage}>DEMO APP</Text>
                 <Button style={styles.countButton} title="go to user page" onPress={() => this.props.navigation.navigate('user')} />
                 <Text style={styles.whatPage}>MAIN PAGE</Text>
                 <Button title="      +      " onPress={() => this.handleCountUp()} />

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity, Linking } from 'react-native';
 import * as actions from '../actions'
 import { styles } from '../styles'
 import QRCodeScanner from 'react-native-qrcode-scanner'
