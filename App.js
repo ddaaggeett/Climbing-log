@@ -17,6 +17,9 @@ const RootNavigator = StackNavigator({
 	},
 	qrscanner: {
 		screen: screens.QRScanner,
+	},
+	rockwall: {
+		screen: screens.RockWall,
 	}
 })
 

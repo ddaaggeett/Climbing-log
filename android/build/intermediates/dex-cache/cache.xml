@@ -8,16 +8,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_28c1615453880d94561cee6fccca3790070a7191.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_28c1615453880d94561cee6fccca3790070a7191.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/12.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_d34b912e5c79a6beeb1aa78cb3e72d0ebf360aa4.jar" />
+        sha1="ed8395f343c428cd55c60499f04323083f4ef0db">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-12.0.1_e5d3421a082feb2ab62acaa30d403f18b3d6f134.jar" />
     </item>
     <item
         is-multidex="false"
@@ -26,7 +26,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="39ded76b5e1ce1c5b2688e1d25cdc20ecee32007">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/support-annotations-27.1.1_37d301a8487a3025ebc897ca09ae84ceed21c35e.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/support-annotations-27.1.1_37d301a8487a3025ebc897ca09ae84ceed21c35e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -35,133 +35,52 @@
         optimize="true"
         revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_6e3da4e3f3d245f38901f622963e8e320b5f15b5.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_6e3da4e3f3d245f38901f622963e8e320b5f15b5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_28cda3204b4a89ec8bec3a9b44e674df24d91162.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_2650a10ddae51a1b26c1c9107fa0189715e65183.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_7e25ebad37dbb9f220c5473192eb07ac1b43fda1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_d4806df5c5963b894cb60c349d79f6cab61baaaf.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_c571daea533a70d87159a35a019f4c35e73c6a10.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="2442771a5590dd4eb4bce00c2e9dca9e22e4c963">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.1.0_4a0bdf0713e3a44deeb0cdb55f279b1345bc653c.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.1.0_65b28f0024dd29dae092f5d0512db226de49e2ec.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/12.0.1/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="a38a8974c8d066800237d22a86df2e88cb9e065c">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-12.0.1_6c30d17ac9748fff342cf92abc7182aca3c75760.jar" />
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.1.0_c4cd61b7322bea9989cdf5f758c4e610a4a6beff.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_21ff32862b302bdeea529892c88865ac2ca3d060.jar" />
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_6800b57f0fb3600a31ed96220acddfbebc44a228.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/climbinglog/react-native-camera/unspecified/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/exifinterface/27.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="ad0e83e40d256250ea7750facf5dc2d8143656c6">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/climbinglog-react-native-camera-unspecified_f9d854ea740fc6a1f234aa13ebf1ec2124234906.jar" />
+        sha1="791ae2023f98dca602015cd1661accbd4590ed03">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-exifinterface-27.1.1_03e52eeb82f59cf964f618bd306c06fdb107209e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/eb9f726215bbbfcc03a54db92e480d4d02e0c001/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="e4dc450bae476c8e0b030cc855f577dbbc7d2d82">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.github.react-native-community-cameraview-eb9f726215bbbfcc03a54db92e480d4d02e0c001_99527ad18d00d9d7b13324cbfc6e3357acbff6b4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_f0da14c7da864ac3d1717856fc5d83501c3a391a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.52.0_7c34ee8ba8861fef67438b0c00a43cba3dff7912.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="508f50705b4fde51a16259f29c854201a3044516">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_9707484440d39d3c05349565063d190f63d12e1b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_ab46b9494cf0a003e93ebba6b55105b80e2f0446.jar" />
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_00d704e825d6324bdf8a300cdd8725d63b50cd80.jar" />
     </item>
     <item
         is-multidex="false"
@@ -170,61 +89,25 @@
         optimize="true"
         revision="23.0.1"
         sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_3b4f9f69e3660a85239e985cc3e088213f0533da.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_3b4f9f69e3660a85239e985cc3e088213f0533da.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/12.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_ada1abbc439fb8dab7641a01f81385a4a8388fae.jar" />
+        sha1="a38a8974c8d066800237d22a86df2e88cb9e065c">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-12.0.1_ddabca66778e71a57b358e921eaae200946bb001.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_d7c3a486d3bf23483bcac0d7692c5b1914f890e9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_baa628cb1eb847ee4238a48176fa94a36b0d0f48.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/exifinterface/27.1.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="791ae2023f98dca602015cd1661accbd4590ed03">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-exifinterface-27.1.1_054af1fa72dd45439ae16646f3a158efad9465d2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.1.0_7a479cf67855d46a74884515f2fbca9303e2066d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_9135c4727995556c5195adfa65c4660e94b4d274.jar" />
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_3fac8de1c7e8f2705dd902821fe2d66d2353b44b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -233,16 +116,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_fd1b72c486e103c2e01c935ef88591034c2b3721.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_825a535e0c8e7d778b778c1da1c2b7c153b31f50.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_fd1b72c486e103c2e01c935ef88591034c2b3721.jar" />
     </item>
     <item
         is-multidex="false"
@@ -251,16 +125,16 @@
         optimize="true"
         revision="23.0.1"
         sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_a5f36150e487399ecc95a43db9e6acf701baf984.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_a5f36150e487399ecc95a43db9e6acf701baf984.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.1.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.1.0_ada1392a4b69c41bb85d522b30bce06a823f067a.jar" />
+        sha1="508f50705b4fde51a16259f29c854201a3044516">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.1.0_f91df04800e4479315ce1ad653392ef91f69ec0d.jar" />
     </item>
     <item
         is-multidex="false"
@@ -269,25 +143,7 @@
         optimize="true"
         revision="23.0.1"
         sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_3d67b8c07b7e6eaa551b980e79c0dc9c9fcfb80f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_3527f75fdc575a5db9587c5ce56313da3e766696.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_d6a4f2c9a2309b7747f8f39abb4f07db3dad72c1.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_3d67b8c07b7e6eaa551b980e79c0dc9c9fcfb80f.jar" />
     </item>
     <item
         is-multidex="false"
@@ -296,61 +152,205 @@
         optimize="true"
         revision="23.0.1"
         sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_f0edc9d9b959fcc692b6ee5ca479de18a95f685f.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_f0edc9d9b959fcc692b6ee5ca479de18a95f685f.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.github.react-native-community/cameraview/eb9f726215bbbfcc03a54db92e480d4d02e0c001/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_6311c1f62bfeb1b503d67cb5705af3bee13a4c67.jar" />
+        sha1="e4dc450bae476c8e0b030cc855f577dbbc7d2d82">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.github.react-native-community-cameraview-eb9f726215bbbfcc03a54db92e480d4d02e0c001_34e2c8df3f57fe253a973fce6ae9177a5ab4504d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/12.0.1/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="ed8395f343c428cd55c60499f04323083f4ef0db">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-12.0.1_a1535be39570594141a0253b3221c93a83a11dc1.jar" />
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_5ef3cb8f7826d8b54d130e52503b34a5e62e9659.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/12.0.1/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="22569eca3029ab00583c332a2be220cdbf091b35">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-12.0.1_1874608e82339aa9278ffd19486464d0ca1503d9.jar" />
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_3b8b74893341fb4a757205c6e6e25dc19fa031d5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/12.0.1/jars/classes.jar"
+        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/common/1.0.0/e414a4cb28434e25c4f6aa71426eb20cf4874ae9/common-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/common-1.0.0_d34b912e5c79a6beeb1aa78cb3e72d0ebf360aa4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_2650a10ddae51a1b26c1c9107fa0189715e65183.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/12.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="cc95ad466da44800955b79689023485ea39924a3">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-12.0.1_c8e02a0e8676cd53f273d612a297123a55de3ff3.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-12.0.1_987285b62e7d258d4b1d39934852fe1366316387.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision-common/12.0.1/jars/classes.jar"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/android.arch.lifecycle/runtime/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="1fddd828aa2365a453562d62b07da4a2d94a24ad">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-common-12.0.1_fdac97b369d8b19531b5de25b2f47a00fcc23307.jar" />
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/android.arch.lifecycle-runtime-1.0.0_78c41d2e68a495f8689bda9b41ac8a8ba5bc4090.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_c571daea533a70d87159a35a019f4c35e73c6a10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f97cf85b0fe70d37a705111dafa6b1b418ea1650">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.1.0_183f73b85104e81baad0070c56aa6bfc3b43b139.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/ddaaggeett/github/climbing-log-ejected/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_938273a99a9fd65df73bbfbbbe5492be33939eda.jar" />
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_dc2b7597b3881e161cc5dcf95ee244e3137ca4fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision-common/12.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fddd828aa2365a453562d62b07da4a2d94a24ad">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-common-12.0.1_63d8c6df631c2fa710a7413eac066afea746667d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_d90aef8d51a21296ba927cb4b6aa4764bcd4315c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_af6cf2c5faacd1037ea95addb9352a4908ff7b05.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_ada1abbc439fb8dab7641a01f81385a4a8388fae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_baa628cb1eb847ee4238a48176fa94a36b0d0f48.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_41bc2f0deec8fba243fb2ef4d0af9c5cc1f4e307.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.52.0_2bfdf3b60ab5f9990ebde8180922d560c53f59c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_2bd4118d544431c984c9779ae4fd8df0aae28e8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="7efef32744ca4a436492d5cf28c08698cc2af256">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.1.0_98a3b629063d7f52a5c5c68fe0415eecf6288f1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/12.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="22569eca3029ab00583c332a2be220cdbf091b35">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-12.0.1_a77f0609f9505c17db1ec85531a9d27c31bf456f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/climbinglog/react-native-camera/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ad0e83e40d256250ea7750facf5dc2d8143656c6">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/climbinglog-react-native-camera-unspecified_510130085a68e5c1dc3e5c9fa8250dc74b3c5d18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="233f60a165ae622c8b36731502ebbda0f65e1930">
+        <dex dex="/Users/ddaaggeett/github/climbing-log/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.1.0_93aa4bdfb941ec639083560b719e46cdf5e70695.jar" />
     </item>
 
 </items>
