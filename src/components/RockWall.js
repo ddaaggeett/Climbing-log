@@ -9,7 +9,7 @@ export default class RockWall extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <Text>rock wall page</Text>
+            <Text>Rock Wall ID: {this.props.navigation.state.params.wallID}</Text>
         </View>
     )
   }

@@ -11,21 +11,16 @@ export default class QRScanner extends Component {
 
     onSuccess(e) {
         // Linking.openURL(e.data).catch(err => console.error('An error occured', err))
-        this.props.navigation.navigate('rockwall')
+        this.props.navigation.navigate('rockwall', { wallID: e.data })
     }
 
     render() {
         return (
             <QRCodeScanner
                 onRead={this.onSuccess.bind(this)}
-                topContent={
-                    <Text style={styles.centerText}>
-                        Go to <Text>ddaaggeett.xyz</Text> on your computer and scan the QR code.
-                    </Text>
-                }
                 bottomContent={
                     <TouchableOpacity style={styles.buttonTouchable}>
-                        <Text>OK. Got it!</Text>
+                        <Text>scan your wall's QR code</Text>
                     </TouchableOpacity>
                 }
             />
