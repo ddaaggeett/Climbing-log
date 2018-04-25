@@ -4,5 +4,5 @@
     "dbPort": 28015,
     "socketPort": 3456,
     "db": "climbing_log",
-    "table": "count"
+    "table": "walls"
 }

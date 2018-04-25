@@ -5,17 +5,23 @@ var app = express()
 var r = require('rethinkdb')
 var config = require('config')
 
-var ioServer = app.listen(process.env.PORT || config.get('socketPort'), function() {
-    var host = config.get('host')
+var db_host = config.get('host')
+var socket_port = config.get('socketPort')
+var db_port = config.get('dbPort')
+var db = config.get('db')
+var db_table = config.get('table')
+
+var ioServer = app.listen(process.env.PORT || socket_port, function() {
+    var host = db_host
     var port = ioServer.address().port;
     console.log('socket.io listening at http://' + host + ':' + port);
 });
 var io = require('socket.io')(ioServer, {pingTimeout: 1})
 
 r.connect({
-    host: config.get('host'),
-    port: config.get('dbPort'),
-    db: config.get('db')
+    host: db_host,
+    port: db_port,
+    db: db
 }).then(function(connection) {
 
 	io.sockets.on('connection', function (socket) {
@@ -23,17 +29,17 @@ r.connect({
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             console.log('client trigger\n',newUserInst)
             try {
-                r.table(config.get('table')).get(newUserInst.id).update(newUserInst).run(connection);
+                r.table(db_table).get(newUserInst.id).update(newUserInst).run(connection);
             }
             catch(err) {
-                r.table(config.get('table')).insert(newUserInst).run(connection);
+                r.table(db_table).insert(newUserInst).run(connection);
             }
         })
 
         /*
         RethinkDB changefeed
         */
-        r.table(config.get('table')).changes({ includeInitial: true, squash: true }).run(connection).then(changefeeds.changefeeds(socket));
+        r.table(db_table).changes({ includeInitial: true, squash: true }).run(connection).then(changefeeds.changefeeds(socket));
 	});
 })
 .error(function(error) {
