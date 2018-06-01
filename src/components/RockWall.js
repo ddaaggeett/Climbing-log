@@ -24,13 +24,11 @@ export default class RockWall extends Component {
         return (
             <View style={styles.container}>
                 <Text>Rock Wall ID: {this.state.wall}</Text>
-                <div>
-                    <Text className='succeeded'>Succeeded?</Text>
-                    <Switch className='succeeded'
-                        onValueChange = {this.handleToggleWallSuccess}
-                        value = {this.state.succeeded}
-                        />
-                </div>
+                <Text className='succeeded'>Succeeded?</Text>
+                <Switch className='succeeded'
+                    onValueChange = {this.handleToggleWallSuccess}
+                    value = {this.state.succeeded}
+                    />
                 <Text>Wall Setter: {this.state.setter}</Text>
                 <TextInput
                     style={{height: 40}}
