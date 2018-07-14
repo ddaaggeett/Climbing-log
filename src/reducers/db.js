@@ -7,8 +7,11 @@ const initialState = {
 export default function db(state = initialState, action) {
 	switch(action.type) {
 
-        case actions.UPDATE_USER_INST:
+		case actions.UPDATE_USER_INST:
             return action.newUserInst
+
+		case actions.UPDATE_WALL:
+            return action.newWall
 
         default:
 			return state

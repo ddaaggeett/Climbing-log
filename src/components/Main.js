@@ -20,19 +20,20 @@ export default class Main extends Component {
         socket.emit(actions.UPDATE_USER_INST, newUserInst)
     }
     handleCountDown() {
-        this.props.countDown()
+        this.props.countDown() // Redux only
 
         const newUserInst = {
             ...this.props.db,
             count: this.props.db.count - 1
         }
-        socket.emit(actions.UPDATE_USER_INST, newUserInst)
+        socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
     }
     render() {
         return (
             <View style={styles.container}>
                 <Text style={styles.whatPage}>MAIN APP</Text>
                 <Button style={styles.countButton} title="QR Scanner" onPress={() => this.props.navigation.navigate('qrscanner')} />
+                <Button style={styles.countButton} title="All Walls" onPress={() => this.props.navigation.navigate('allwalls')} />
                 <Text style={styles.whatPage}>DEMO APP</Text>
                 <Button style={styles.countButton} title="go to user page" onPress={() => this.props.navigation.navigate('user')} />
                 <Text style={styles.whatPage}>MAIN PAGE</Text>

@@ -19,10 +19,14 @@ export default class RockWall extends Component {
         })
     }
     componentWillMount() {
+        this.handleWallScan()
     }
     render() {
         return (
             <View style={styles.container}>
+
+                <Text>visitor # {this.wallvisits}</Text>
+
                 <Text>Rock Wall ID: {this.state.wall}</Text>
                 <Text className='succeeded'>Succeeded?</Text>
                 <Switch className='succeeded'
@@ -39,5 +43,9 @@ export default class RockWall extends Component {
 
             </View>
         )
+    }
+
+    handleWallScan() {
+
     }
 }

@@ -20,6 +20,9 @@ const RootNavigator = StackNavigator({
 	},
 	rockwall: {
 		screen: screens.RockWall,
+	},
+	allwalls: {
+		screen: screens.AllWalls,
 	}
 })
 

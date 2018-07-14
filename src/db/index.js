@@ -36,6 +36,16 @@ r.connect({
             }
         })
 
+        socket.on(actions.UPDATE_WALL, function(newWall) {
+            console.log('trigger wall change')
+            try {
+                r.table(db_table).get(newWall.id).update(newWall).run(connection);
+            }
+            catch(err) {
+                r.table(db_table).insert(newWall).run(connection);
+            }
+        })
+
         /*
         RethinkDB changefeed
         */
