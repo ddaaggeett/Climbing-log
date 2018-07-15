@@ -17,10 +17,15 @@ export default class QRScanner extends Component {
     render() {
         return (
             <QRCodeScanner
+                topViewStyle={styles.container}
+                bottomViewStyle={styles.container}
                 onRead={this.onSuccess.bind(this)}
+                topContent={
+                    <Text style={styles.text}>Scan a wall's QR code</Text>
+                }
                 bottomContent={
                     <TouchableOpacity style={styles.buttonTouchable}>
-                        <Text>scan your wall's QR code</Text>
+                        <Text style={styles.text}>just hover the camera</Text>
                     </TouchableOpacity>
                 }
             />

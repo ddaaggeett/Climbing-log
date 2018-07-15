@@ -17,7 +17,7 @@ export default class AllWalls extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>all walls</Text>
+                <Text style={styles.text}>all walls</Text>
             </View>
         )
     }

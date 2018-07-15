@@ -9,9 +9,9 @@ export default class User extends Component {
   render() {
     return (
         <View style={styles.container}>
-            <Text style={styles.whatPage}>USER ACCOUNT PAGE</Text>
-                <Text style={styles.counterText}>redux only = {this.props.local.count}</Text>
-                <Text style={styles.counterText}>rethinkDB + redux = {this.props.db.count}</Text>
+            <Text style={styles.text}>USER ACCOUNT PAGE</Text>
+                <Text style={styles.text}>redux only = {this.props.local.count}</Text>
+                <Text style={styles.text}>rethinkDB + redux = {this.props.db.count}</Text>
         </View>
     )
   }

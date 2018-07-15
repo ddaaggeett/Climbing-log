@@ -24,6 +24,12 @@ const RootNavigator = StackNavigator({
 	allwalls: {
 		screen: screens.AllWalls,
 	}
+},
+{
+	headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false,
+    }
 })
 
 export default class App extends Component {
