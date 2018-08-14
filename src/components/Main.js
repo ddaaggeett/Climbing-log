@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, ScrollView, Button, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Button, Image, ImageBackground, TextInput } from 'react-native';
 import * as actions from '../actions'
 import { styles } from '../styles'
 
@@ -9,6 +9,9 @@ const socket = io.connect('http://192.168.0.3:3456') // TODO: react-native confi
 export default class Main extends Component {
     constructor(props) {
         super(props)
+        this.state = {
+            userID: ''
+        }
     }
     handleCountUp() {
         this.props.countUp()
@@ -28,23 +31,20 @@ export default class Main extends Component {
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
     }
+    handleChangeUserID(text) {
+        this.setState({
+            userID: text,
+        })
+        console.log(this.state.userID)
+    }
     render() {
-
-        // const buttonStyle = {
-        //     backgroundColor: "rgba(92, 99,216, 1)",
-        //     width: 300,
-        //     height: 45,
-        //     borderColor: "transparent",
-        //     borderWidth: 0,
-        //     borderRadius: 5
-        // }
-
         return (
             <ScrollView endFillColor={'#47515b'}>
                 <View style={styles.container}>
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
                 <Text style={[styles.text, styles.appName]}>climblogger</Text>
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
+                <TextInput style={styles.text} defaultValue="user ID" onChangeText={(text) => this.handleChangeUserID(text)}/>
                 <Button title="QR Scanner" onPress={() => this.props.navigation.navigate('qrscanner')} />
                 <Button title="All Walls" onPress={() => this.props.navigation.navigate('allwalls')} />
                 <Button title="go to user page" onPress={() => this.props.navigation.navigate('user')} />
