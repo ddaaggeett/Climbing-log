@@ -978,6 +978,7 @@ public final class R {
         public static final int Widget_AppCompat_TextView_SpinnerItem = 0x7f0c017b;
         public static final int Widget_AppCompat_Toolbar = 0x7f0c017c;
         public static final int Widget_AppCompat_Toolbar_Button_Navigation = 0x7f0c017d;
+        public static final int redboxButton = 0x7f0c0181;
     }
     public static final class styleable {
         public static final int[] ActionBar = { 0x7f020036, 0x7f020038, 0x7f020039, 0x7f02005f, 0x7f020060, 0x7f020061, 0x7f020062, 0x7f020063, 0x7f020064, 0x7f020066, 0x7f02006a, 0x7f02006b, 0x7f020076, 0x7f020089, 0x7f02008a, 0x7f02008b, 0x7f02008c, 0x7f02008d, 0x7f020094, 0x7f020097, 0x7f0200a4, 0x7f0200ab, 0x7f0200b9, 0x7f0200c0, 0x7f0200c1, 0x7f0200e8, 0x7f0200eb, 0x7f020106, 0x7f02010f };

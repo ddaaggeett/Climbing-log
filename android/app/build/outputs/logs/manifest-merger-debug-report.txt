@@ -5,7 +5,7 @@ INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/sr
 INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:1:1-34:12
 INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:1:1-34:12
 MERGED from [:react-native-camera] /Users/ddaaggeett/github/matt_climbing/climbing-log/node_modules/react-native-camera/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-18:12
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:2:1-15:12
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:exifinterface:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/exifinterface-26.1.0.aar/4a30537672f172b3b28d9753122cda91/AndroidManifest.xml:17:1-28:12
 MERGED from [com.google.android.gms:play-services-vision:12.0.1] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/play-services-vision-12.0.1.aar/36376551ce49531644930ab57cab5d46/AndroidManifest.xml:2:1-9:12
@@ -59,8 +59,8 @@ ADDED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/m
 		ADDED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:7:5-77
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-permission#android.permission.VIBRATE
@@ -79,8 +79,8 @@ INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/sr
 INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-camera] /Users/ddaaggeett/github/matt_climbing/climbing-log/node_modules/react-native-camera/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-camera] /Users/ddaaggeett/github/matt_climbing/climbing-log/node_modules/react-native-camera/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:exifinterface:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/exifinterface-26.1.0.aar/4a30537672f172b3b28d9753122cda91/AndroidManifest.xml:20:5-44
@@ -153,8 +153,8 @@ INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/sr
 		INJECTED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/ddaaggeett/github/matt_climbing/climbing-log/android/app/src/main/AndroidManifest.xml:15:5-32:19
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.52.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.52.0.aar/05fa35ee10763eeaf83f2c881ef0d065/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/8f60e79933c82e0e6cc61cdaaa2b74cc/AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:exifinterface:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/exifinterface-26.1.0.aar/4a30537672f172b3b28d9753122cda91/AndroidManifest.xml:22:5-26:19

@@ -3326,6 +3326,7 @@ public final class R {
     public static final int Widget_CameraView=0x7f0c017e;
     public static final int Widget_Compat_NotificationActionContainer=0x7f0c017f;
     public static final int Widget_Compat_NotificationActionText=0x7f0c0180;
+    public static final int redboxButton=0x7f0c0181;
   }
   public static final class styleable {
     /**
