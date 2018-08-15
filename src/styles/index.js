@@ -13,6 +13,10 @@ export const styles = StyleSheet.create({
         height: 250,
     },
     appName: {
+        fontSize: 24,
+    },
+    userID_enter: {
+        textAlign: 'center',
         fontSize: 20,
     },
 });

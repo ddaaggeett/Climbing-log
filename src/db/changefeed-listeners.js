@@ -4,9 +4,10 @@ handles redux action dispathes
 */
 import * as actions from '../actions'
 import * as actionCreators from '../actions/actionCreators'
+import rnConfig from '../../config/rnConfig'
 
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://192.168.0.3:3456')
+const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
 
 function dispatchRedux(changefeedType, store, object) {
     store.dispatch(actionCreators.updateUserInst(object))
