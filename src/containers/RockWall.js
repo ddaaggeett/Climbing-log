@@ -8,7 +8,7 @@ import * as actionCreators from '../actions/actionCreators'
 
 function mapStateToProps(state) {
 	return {
-		db: state.db,
+		user: state.user,
 		local: state.local,
 	}
 }

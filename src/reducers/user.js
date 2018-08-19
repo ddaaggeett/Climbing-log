@@ -4,9 +4,10 @@ const initialState = {
 	count: 0,
 	userID: 'userID',
 	walls: [],
+	currentWall: null,
 }
 
-export default function db(state = initialState, action) {
+export default function user(state = initialState, action) {
 	switch(action.type) {
 
 		case actions.UPDATE_USER_INST:

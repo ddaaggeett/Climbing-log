@@ -15,11 +15,11 @@ export default class QRScanner extends Component {
     onSuccess(e) {
         const wall = e.data
         var newUserInst = {}
-        if(!this.props.db.walls.includes(wall)){
+        if(!this.props.user.walls.includes(wall)){
             newUserInst = {
-                ...this.props.db,
+                ...this.props.user,
                 walls: [
-                    ...this.props.db.walls,
+                    ...this.props.user.walls,
                     wall
                 ],
                 currentWall: wall,
@@ -27,7 +27,7 @@ export default class QRScanner extends Component {
         }
         else {
             newUserInst = {
-                ...this.props.db,
+                ...this.props.user,
                 currentWall: wall,
             }
         }

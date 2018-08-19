@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import db from './db';
+import user from './user';
 import local from './local';
 
 export default combineReducers({
-    db,
+    user,
     local,
 });

@@ -10,9 +10,7 @@ const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketP
 export default class Main extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            userID: 'userID'
-        }
+        this.state = {}
     }
     handleChangeUserID(text) {
         this.setState({
@@ -21,7 +19,7 @@ export default class Main extends Component {
     }
     handleSubmitUserID() {
         const newUserInst = {
-            ...this.props.db,
+            ...this.props.user,
             userID: this.state.userID,
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
@@ -34,7 +32,7 @@ export default class Main extends Component {
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
                 <Text style={[styles.text, styles.appName]}>climblogger</Text>
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
-                <TextInput style={[styles.text, styles.userID_enter]} defaultValue={this.state.userID} onChangeText={(text) => this.handleChangeUserID(text)} />
+                <TextInput style={[styles.text, styles.userID_enter]} defaultValue={this.props.user.userID} onChangeText={(text) => this.handleChangeUserID(text)} />
                 <Button title="enter" onPress={() => this.handleSubmitUserID()} />
             </View>
             </ScrollView>

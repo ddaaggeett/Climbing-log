@@ -11,7 +11,7 @@ export default class AllWalls extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>all walls climbed by {this.props.db.userID}</Text>
+                <Text style={styles.text}>all walls climbed by {this.props.user.userID}</Text>
                 <WallList />
             </View>
         )

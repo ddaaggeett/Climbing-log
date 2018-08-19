@@ -7,10 +7,10 @@ export default class User extends Component {
         super(props)
     }
     render() {
-        const wallsButtonText = this.props.db.userID + '\'s walls'
+        const wallsButtonText = this.props.user.userID + '\'s walls'
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>ACCOUNT PAGE: {this.props.db.userID}</Text>
+                <Text style={styles.text}>ACCOUNT PAGE: {this.props.user.userID}</Text>
                 <Button title="QR Scanner" onPress={() => this.props.navigation.navigate('qrscanner')} />
                 <Button title={wallsButtonText} onPress={() => this.props.navigation.navigate('allwalls')} />
             </View>
