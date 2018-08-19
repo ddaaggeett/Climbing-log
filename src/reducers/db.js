@@ -2,6 +2,8 @@ import * as actions from '../actions'
 
 const initialState = {
 	count: 0,
+	userID: 'userID',
+	walls: [],
 }
 
 export default function db(state = initialState, action) {

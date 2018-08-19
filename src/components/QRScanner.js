@@ -3,6 +3,9 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, Linking } from 'react
 import * as actions from '../actions'
 import { styles } from '../styles'
 import QRCodeScanner from 'react-native-qrcode-scanner'
+import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
+import io from 'socket.io-client/dist/socket.io'
+const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
 
 export default class QRScanner extends Component {
     constructor(props) {
@@ -10,8 +13,26 @@ export default class QRScanner extends Component {
     }
 
     onSuccess(e) {
-        // Linking.openURL(e.data).catch(err => console.error('An error occured', err))
-        this.props.navigation.navigate('rockwall', { wallID: e.data })
+        const wall = e.data
+        var newUserInst = {}
+        if(!this.props.db.walls.includes(wall)){
+            newUserInst = {
+                ...this.props.db,
+                walls: [
+                    ...this.props.db.walls,
+                    wall
+                ],
+                currentWall: wall,
+            }
+        }
+        else {
+            newUserInst = {
+                ...this.props.db,
+                currentWall: wall,
+            }
+        }
+        socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
+        this.props.navigation.navigate('rockwall', { wallID: wall })
     }
 
     render() {
