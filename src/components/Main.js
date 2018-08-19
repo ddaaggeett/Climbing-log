@@ -14,13 +14,13 @@ export default class Main extends Component {
     }
     handleChangeUserID(text) {
         this.setState({
-            userID: text,
+            name: text,
         })
     }
     handleSubmitUserID() {
         const newUserInst = {
             ...this.props.user,
-            userID: this.state.userID,
+            name: this.state.name,
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
         this.props.navigation.navigate('user')
@@ -32,7 +32,7 @@ export default class Main extends Component {
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
                 <Text style={[styles.text, styles.appName]}>climblogger</Text>
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
-                <TextInput style={[styles.text, styles.userID_enter]} defaultValue={this.props.user.userID} onChangeText={(text) => this.handleChangeUserID(text)} />
+                <TextInput style={[styles.text, styles.userID_enter]} defaultValue={this.props.user.name} onChangeText={(text) => this.handleChangeUserID(text)} />
                 <Button title="enter" onPress={() => this.handleSubmitUserID()} />
             </View>
             </ScrollView>

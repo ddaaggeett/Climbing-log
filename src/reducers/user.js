@@ -2,7 +2,7 @@ import * as actions from '../actions'
 
 const initialState = {
 	count: 0,
-	userID: 'userID',
+	name: 'userID',
 	walls: [],
 	currentWall: null,
 }
