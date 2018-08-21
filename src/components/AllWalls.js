@@ -12,7 +12,7 @@ export default class AllWalls extends Component {
         return (
             <View style={styles.container}>
                 <Text style={styles.text}>all walls climbed by {this.props.user.name}</Text>
-                <WallList />
+                <WallList {...this.props} />
             </View>
         )
     }

@@ -10,7 +10,9 @@ const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketP
 export default class Main extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            name: this.props.user.name,
+        }
     }
     handleChangeUserID(text) {
         this.setState({
