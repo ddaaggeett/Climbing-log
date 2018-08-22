@@ -4,5 +4,7 @@
     "dbPort": 28015,
     "socketPort": 3456,
     "db": "climbing_log",
-    "table": "user"
+    "tables": {
+        "user": "user"
+    }
 }
