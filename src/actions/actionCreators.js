@@ -6,19 +6,3 @@ export function updateUserInst(newUserInst) {
         newUserInst
     }
 }
-export function updateWall(newWall) {
-    return {
-        type: actions.UPDATE_WALL,
-        newWall
-    }
-}
-export function countUp() {
-    return {
-        type: actions.COUNT_UP,
-    }
-}
-export function countDown() {
-    return {
-        type: actions.COUNT_DOWN,
-    }
-}
