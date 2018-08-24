@@ -5,6 +5,6 @@
     "socketPort": 3456,
     "db": "climbing_log",
     "tables": {
-        "user": "user"
+        "users": "users"
     }
 }
