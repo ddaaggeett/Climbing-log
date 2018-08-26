@@ -39,6 +39,7 @@ r.connect({
 
 	io.sockets.on('connection', function (socket) {
 
+        // TODO: pull specific user data upon user name entry. currently overwrites any user name with current user data loaded in redux.
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
                 r.table(tables.users).get(newUserInst.name).update(newUserInst).run(connection)

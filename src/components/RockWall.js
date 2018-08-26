@@ -9,7 +9,6 @@ export default class RockWall extends Component {
             wall: this.props.navigation.state.params.wallID,
             setter: 'setterID',
             grade: '',
-            succeeded: false,
         }
     }
     handleToggleWallSuccess = (value) => {
@@ -23,7 +22,7 @@ export default class RockWall extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>Wall: {this.props.user.currentWall}</Text>
+                <Text style={styles.text}>Wall: {this.state.wall}</Text>
                 <Text style={styles.text}>Climber: {this.props.user.name}</Text>
                 <Text style={styles.text} className='succeeded'>Succeeded?</Text>
                 <Switch className='succeeded'

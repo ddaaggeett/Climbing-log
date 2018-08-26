@@ -12,27 +12,57 @@ export default class QRScanner extends Component {
         super(props)
     }
 
+    findUserWallIndex(wall) {
+        const walls = this.props.user.walls
+        for(var x = 0; x < walls.length; x++) {
+            if (walls[x].id == wall) return x
+            else if((x == walls.length - 1) && (walls[x].id != wall)) {
+                return null
+            }
+        }
+    }
+
     onSuccess(e) {
-        const wall = e.data
+        const wallID = e.data
         var newUserInst = {}
-        if(!this.props.user.walls.includes(wall)){
+        if(this.props.user.walls.length == 0) { // first wall
             newUserInst = {
                 ...this.props.user,
                 walls: [
-                    ...this.props.user.walls,
-                    wall
+                    {
+                        id: wallID,
+                        succeeded: false,
+                    }
                 ],
-                currentWall: wall,
             }
         }
-        else {
-            newUserInst = {
-                ...this.props.user,
-                currentWall: wall,
+        else { // not first wall
+            const userWallIndex = this.findUserWallIndex(wallID)
+            if(userWallIndex == null) { // wall doesn't exist yet - add to front
+                newUserInst = {
+                    ...this.props.user,
+                    walls: [
+                        {
+                            id: wallID,
+                            succeeded: false,
+                        },
+                        ...this.props.user.walls,
+                    ],
+                }
+            }
+            else { // wall exists, update to front
+                newUserInst = {
+                    ...this.props.user,
+                    walls: [
+                        this.props.user.walls[userWallIndex],
+                        ...this.props.user.walls.slice(0, userWallIndex),
+                        ...this.props.user.walls.slice(userWallIndex + 1),
+                    ],
+                }
             }
         }
-        socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
-        this.props.navigation.navigate('rockwall', { wallID: wall })
+        socket.emit(actions.UPDATE_USER_INST, newUserInst)
+        this.props.navigation.navigate('rockwall', { wallID: wallID })
     }
 
     render() {
