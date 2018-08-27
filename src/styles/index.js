@@ -19,4 +19,11 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
     },
+    wallListItem: {
+        fontSize: 20,
+        height: 40,
+        borderColor: '#fff',
+        borderBottomWidth: 1,
+        padding: 0,
+    },
 });
