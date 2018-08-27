@@ -11,18 +11,14 @@ export default class WallList extends Component {
         console.log('wall = ' + some)
     }
     render() {
-        console.log('this.props.user.walls\n' + this.props.user.walls)
         return (
-            <View style={styles.container}>
-                <FlatList
-                    data={this.props.user.walls}
-                    renderItem={({wall}) => {
-                        <TouchableOpacity onPress={() => this.handlePressWall(wall)}>
-                            <Text>{wall}</Text>
-                        </TouchableOpacity>
-                    }}
-                />
-            </View>
+            <FlatList
+                data={this.props.user.walls}
+                renderItem={({item}) => (
+                    <Text style={styles.text}>{item.id}</Text>
+                )}
+                keyExtractor={(item, key) => item.id}
+            />
         )
     }
 }
