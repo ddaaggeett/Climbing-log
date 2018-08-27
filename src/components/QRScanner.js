@@ -25,7 +25,7 @@ export default class QRScanner extends Component {
     onSuccess(e) {
         const wallID = e.data
         var newUserInst = {}
-        if(this.props.user.walls.length == 0) { // first wall
+        if(this.props.user.walls == undefined) { // first wall
             newUserInst = {
                 ...this.props.user,
                 walls: [

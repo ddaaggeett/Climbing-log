@@ -2,7 +2,6 @@ import * as actions from '../actions'
 
 const initialState = {
 	name: 'userID',
-	walls: [],
 }
 
 export default function user(state = initialState, action) {

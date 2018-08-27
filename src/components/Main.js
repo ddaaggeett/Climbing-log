@@ -21,8 +21,8 @@ export default class Main extends Component {
     }
     handleSubmitUserID() {
         const newUserInst = {
-            ...this.props.user,
             name: this.state.name,
+            lastLogin: Date.now(),
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
         this.props.navigation.navigate('user')
