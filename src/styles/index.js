@@ -24,6 +24,9 @@ export const styles = StyleSheet.create({
         height: 40,
         borderColor: '#fff',
         borderBottomWidth: 1,
-        padding: 0,
+    },
+    screenHeader: {
+        textAlign: 'center',
+        fontSize: 20,
     },
 });
