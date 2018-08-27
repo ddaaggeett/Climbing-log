@@ -1,10 +1,19 @@
 import { createStore, applyMiddleware, compose } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
 import logger from '../dev/logger';
 
 import rootReducer from '../reducers';
 
 const isProduction = process.env.NODE_ENV === 'production';
+
+const persistConfig = {
+    key: 'root',
+    storage,
+}
+
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // Creating store
 export default () => {
@@ -30,17 +39,19 @@ export default () => {
   }
 
   store = createStore(
-      rootReducer,
+      persistedReducer,
       middleware
   );
+
+  let persistor = persistStore(store)
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
     module.hot.accept('../reducers', () => {
       const nextRootReducer = require('../reducers/index').default; // eslint-disable-line global-require
-      store.replaceReducer(nextRootReducer);
+      store.replaceReducer(persistConfig, nextRootReducer);
     });
   }
 
-  return store;
+  return { store, persistor }
 };
