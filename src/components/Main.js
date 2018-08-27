@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, ScrollView, Button, Image, ImageBackground, Tex
 import * as actions from '../actions'
 import { styles } from '../styles'
 import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
-
 import io from 'socket.io-client/dist/socket.io'
 const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
 

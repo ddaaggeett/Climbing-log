@@ -2,12 +2,27 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View, Button, FlatList, TouchableHighlight } from 'react-native';
 import * as actions from '../actions'
 import { styles } from '../styles'
+import { findUserWallIndex } from '../logic'
+import QRScanner from './QRScanner'
+import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
+import io from 'socket.io-client/dist/socket.io'
+const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
 
 export default class WallList extends Component {
     constructor(props) {
         super(props)
     }
     handlePressWall(wall) {
+        const userWallIndex = findUserWallIndex(wall.id, this.props.user.walls)
+        const newUserInst = {
+            ...this.props.user,
+            walls: [
+                this.props.user.walls[userWallIndex],
+                ...this.props.user.walls.slice(0, userWallIndex),
+                ...this.props.user.walls.slice(userWallIndex + 1),
+            ],
+        }
+        socket.emit(actions.UPDATE_USER_INST, newUserInst)
         this.props.navigation.navigate('rockwall', { wallID: wall.id })
     }
     render() {

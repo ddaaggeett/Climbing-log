@@ -4,7 +4,6 @@ import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
 import logger from '../dev/logger';
 import rootReducer from '../reducers';
-import { purgeStoredState } from 'redux-persist'
 
 const isProduction = process.env.NODE_ENV === 'production';
 

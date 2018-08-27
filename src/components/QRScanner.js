@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity, Linking } from 'react-native';
 import * as actions from '../actions'
+import { findUserWallIndex } from '../logic'
 import { styles } from '../styles'
 import QRCodeScanner from 'react-native-qrcode-scanner'
 import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
@@ -10,16 +11,6 @@ const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketP
 export default class QRScanner extends Component {
     constructor(props) {
         super(props)
-    }
-
-    findUserWallIndex(wall) {
-        const walls = this.props.user.walls
-        for(var x = 0; x < walls.length; x++) {
-            if (walls[x].id == wall) return x
-            else if((x == walls.length - 1) && (walls[x].id != wall)) {
-                return null
-            }
-        }
     }
 
     onSuccess(e) {
@@ -37,7 +28,7 @@ export default class QRScanner extends Component {
             }
         }
         else { // not first wall
-            const userWallIndex = this.findUserWallIndex(wallID)
+            const userWallIndex = findUserWallIndex(wallID, this.props.user.walls)
             if(userWallIndex == null) { // wall doesn't exist yet - add to front
                 newUserInst = {
                     ...this.props.user,
