@@ -1,8 +1,6 @@
 import * as actions from '../actions'
 
-const initialState = {
-	name: 'userID',
-}
+const initialState = {}
 
 export default function user(state = initialState, action) {
 	switch(action.type) {

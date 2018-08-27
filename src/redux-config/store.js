@@ -3,8 +3,8 @@ import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import thunk from 'redux-thunk';
 import logger from '../dev/logger';
-
 import rootReducer from '../reducers';
+import { purgeStoredState } from 'redux-persist'
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -44,6 +44,7 @@ export default () => {
   );
 
   let persistor = persistStore(store)
+  // persistor.purge() // TODO: run as separate script when necessary
 
   if (module.hot) {
     // Enable Webpack hot module replacement for reducers
