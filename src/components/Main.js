@@ -9,18 +9,13 @@ const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketP
 export default class Main extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            name: this.props.user.name,
-        }
     }
     handleChangeUserID(text) {
-        this.setState({
-            name: text.toLowerCase(),
-        })
+        this.props.alterLoginName(text)
     }
     handleSubmitUserID() {
         const newUserInst = {
-            name: this.state.name,
+            name: this.props.user.name,
             lastLogin: Date.now(),
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux

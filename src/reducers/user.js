@@ -5,6 +5,12 @@ const initialState = {}
 export default function user(state = initialState, action) {
 	switch(action.type) {
 
+		case actions.ALTER_LOGIN_NAME:
+			return {
+				...state,
+				name: action.name.toLowerCase()
+			}
+
 		case actions.UPDATE_USER_INST:
             return action.newUserInst
 

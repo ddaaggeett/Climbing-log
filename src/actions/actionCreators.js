@@ -6,3 +6,9 @@ export function updateUserInst(newUserInst) {
         newUserInst
     }
 }
+export function alterLoginName(name) {
+    return {
+        type: actions.ALTER_LOGIN_NAME,
+        name
+    }
+}
