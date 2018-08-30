@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux'
-import { StackNavigator } from 'react-navigation'
+import { TabNavigator } from 'react-navigation'
 import * as screens from './src/containers'
 import changefeedListeners from './src/db/changefeed-listeners'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -10,12 +10,20 @@ const persistor = configureStore().persistor
 
 changefeedListeners(store)
 
-const RootNavigator = StackNavigator({
+const RootNavigator = TabNavigator({
 	main: {
 		screen: screens.Main,
+		navigationOptions: {
+			tabBarLabel: 'login',
+			tabBarVisible: false,
+			swipeEnabled: false,
+		},
 	},
 	user: {
 		screen: screens.User,
+		navigationOptions: {
+			tabBarLabel: 'climber',
+		},
 	},
 	qrscanner: {
 		screen: screens.QRScanner,
@@ -25,13 +33,24 @@ const RootNavigator = StackNavigator({
 	},
 	allwalls: {
 		screen: screens.AllWalls,
+		navigationOptions: {
+			tabBarLabel: 'walls',
+		},
 	}
-},
-{
-	headerMode: 'none',
-    navigationOptions: {
-        headerVisible: false,
-    }
+}, {
+	order: ['main','user','allwalls'],
+	initialRouteName: 'main',
+	tabBarOptions: {
+		style: {
+			backgroundColor: '#555',
+		},
+		labelStyle: {
+			fontSize: 14,
+			fontWeight: 'bold',
+		},
+		activeTintColor: '#fff',
+        inactiveTintColor: '#000',
+    },
 })
 
 export default class App extends Component {
