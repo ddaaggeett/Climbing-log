@@ -1,0 +1,42 @@
+import * as actions from '../actions'
+
+const initialState = {
+	allWalls: true,
+	scanner: false,
+	singleWall: false,
+}
+
+export default function views(state = initialState, action) {
+	switch(action.type) {
+
+		case actions.SWAP_WALL_VIEW:
+			if(action.view === 'allWalls'){
+				return {
+					...state,
+					allWalls: true,
+					scanner: false,
+					singleWall: false,
+				}
+			}
+			else if(action.view === 'scanner') {
+				return {
+					...state,
+					allWalls: false,
+					scanner: true,
+					singleWall: false,
+				}
+			}
+			else if(action.view === 'singleWall') {
+				return {
+					...state,
+					allWalls: false,
+					scanner: false,
+					singleWall: true,
+				}
+			}
+
+        default:
+			return state
+
+	}
+}

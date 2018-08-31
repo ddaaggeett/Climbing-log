@@ -53,7 +53,7 @@ export default class QRScanner extends Component {
             }
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst)
-        this.props.navigation.navigate('rockwall', { wallID: wallID })
+        this.props.swapWallView('singleWall')
     }
 
     render() {

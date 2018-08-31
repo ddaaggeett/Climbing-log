@@ -12,3 +12,9 @@ export function alterLoginName(name) {
         name
     }
 }
+export function swapWallView(view) {
+    return {
+        type: actions.SWAP_WALL_VIEW,
+        view
+    }
+}

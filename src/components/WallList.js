@@ -23,7 +23,7 @@ export default class WallList extends Component {
             ],
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst)
-        this.props.navigation.navigate('rockwall', { wallID: wall.id })
+        this.props.swapWallView('singleWall')
     }
     render() {
         if(this.props.user.walls == undefined) {

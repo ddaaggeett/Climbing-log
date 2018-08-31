@@ -9,7 +9,7 @@ import * as actionCreators from '../actions/actionCreators'
 function mapStateToProps(state) {
 	return {
 		user: state.user,
-		local: state.local,
+		views: state.views,
 	}
 }
 
