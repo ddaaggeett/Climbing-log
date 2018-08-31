@@ -26,6 +26,11 @@ export default class WallList extends Component {
         this.props.navigation.navigate('rockwall', { wallID: wall.id })
     }
     render() {
+        if(this.props.user.walls == undefined) {
+            return (
+                <Text style={[styles.text,styles.newHere]}>you must be{'\n'}new here</Text>
+            )
+        }
         return (
             <FlatList
                 data={this.props.user.walls}

@@ -8,12 +8,6 @@ const LoggedInNavigator = TabNavigator({
 			tabBarLabel: 'climber',
 		},
 	},
-	qrscanner: {
-		screen: screens.QRScanner,
-	},
-	rockwall: {
-		screen: screens.RockWall,
-	},
 	allwalls: {
 		screen: screens.AllWalls,
 		navigationOptions: {

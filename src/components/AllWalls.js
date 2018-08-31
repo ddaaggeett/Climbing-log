@@ -11,9 +11,8 @@ export default class AllWalls extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={[styles.text,styles.screenHeader]}>all my walls</Text>
-                <Button title="add new wall" onPress={() => this.props.navigation.navigate('qrscanner')} />
                 <WallList {...this.props} />
+                <Button title="add new wall" onPress={() => this.props.navigation.navigate('qrscanner')} />
             </View>
         )
     }

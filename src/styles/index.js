@@ -25,8 +25,18 @@ export const styles = StyleSheet.create({
         borderColor: '#fff',
         borderBottomWidth: 1,
     },
-    screenHeader: {
-        textAlign: 'center',
+    wallID: {
+        textAlign: 'right',
         fontSize: 20,
+    },
+    newHere: {
+        textAlign: 'center',
+        fontSize: 25,
+        paddingTop:20,
+        paddingBottom:20,
+    },
+    climberName: {
+        textAlign: 'right',
+        fontSize: 25,
     },
 });

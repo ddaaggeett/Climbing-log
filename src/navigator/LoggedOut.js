@@ -11,5 +11,4 @@ const LoggedOutNavigator = createStackNavigator({
     },
 })
 
-
 export default LoggedOutNavigator
