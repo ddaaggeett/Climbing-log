@@ -66,9 +66,7 @@ export default class QRScanner extends Component {
                     <Text style={styles.text}>Scan a wall's QR code</Text>
                 }
                 bottomContent={
-                    <TouchableOpacity style={styles.buttonTouchable}>
-                        <Text style={styles.text}>just hover the camera</Text>
-                    </TouchableOpacity>
+                    <Text style={styles.text}>just hover the camera</Text>
                 }
             />
         )

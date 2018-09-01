@@ -28,7 +28,10 @@ export default class Main extends Component {
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
                 <Text style={[styles.text, styles.appName]}>climblogger</Text>
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
-                <TextInput style={[styles.text, styles.userID_enter]} placeholder="userID" defaultValue={this.props.user.name} onChangeText={(text) => this.handleChangeUserID(text)} />
+                <TextInput style={[styles.text, styles.userID_enter]}
+                    placeholder="userID"
+                    value={this.props.user.name}
+                    onChangeText={(text) => this.handleChangeUserID(text)} />
                 <Button title="enter" onPress={() => this.handleSubmitUserID()} />
             </View>
             </ScrollView>

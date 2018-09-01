@@ -28,7 +28,7 @@ export default class RockWall extends Component {
         socket.emit(actions.UPDATE_USER_INST, newUserInst)
     }
     render() {
-        return (
+        if(this.props.user.walls != undefined) return (
             <View style={styles.container}>
                 <Text style={[styles.text,styles.wallID]}>{this.props.user.walls[0].id}</Text>
                 <Text style={styles.text}>Climber: {this.props.user.name}</Text>
@@ -37,5 +37,6 @@ export default class RockWall extends Component {
                     value = {this.props.user.walls[0].succeeded} />
             </View>
         )
+        else return null // TODO: know how to render if props are not yet available (undefined)?
     }
 }
