@@ -15,7 +15,7 @@ export default class Main extends Component {
     }
     handleSubmitUserID() {
         const newUserInst = {
-            name: this.props.user.name,
+            id: this.props.user.id,
             lastLogin: Date.now(),
         }
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
@@ -30,7 +30,7 @@ export default class Main extends Component {
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
                 <TextInput style={[styles.text, styles.userID_enter]}
                     placeholder="userID"
-                    value={this.props.user.name}
+                    value={this.props.user.id}
                     onChangeText={(text) => this.handleChangeUserID(text)} />
                 <Button title="enter" onPress={() => this.handleSubmitUserID()} />
             </View>

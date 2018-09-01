@@ -8,7 +8,7 @@ export default function user(state = initialState, action) {
 		case actions.ALTER_LOGIN_NAME:
 			return {
 				...state,
-				name: action.name.toLowerCase()
+				id: action.id.toLowerCase()
 			}
 
 		case actions.UPDATE_USER_INST:

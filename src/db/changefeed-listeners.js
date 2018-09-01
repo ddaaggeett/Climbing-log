@@ -9,7 +9,7 @@ import io from 'socket.io-client/dist/socket.io'
 const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
 
 function dispatchRedux(changefeedType, store, object) {
-    if(object.name === store.getState().user.name) { // ensure changefeed equals the user on client device // TODO: user authentication instead!
+    if(object.id === store.getState().user.id) { // ensure changefeed equals the user on client device // TODO: user authentication instead!
         store.dispatch(actionCreators.updateUserInst(object))
     }
 }

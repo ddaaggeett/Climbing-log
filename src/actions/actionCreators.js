@@ -6,10 +6,10 @@ export function updateUserInst(newUserInst) {
         newUserInst
     }
 }
-export function alterLoginName(name) {
+export function alterLoginName(id) {
     return {
         type: actions.ALTER_LOGIN_NAME,
-        name
+        id
     }
 }
 export function swapWallView(view) {
