@@ -19,11 +19,14 @@ export const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 20,
     },
+    wallList: {
+        marginTop:10,
+    },
     wallListItem: {
         fontSize: 20,
-        height: 40,
         borderColor: '#fff',
         borderBottomWidth: 1,
+        paddingBottom:18,
     },
     wallID: {
         textAlign: 'right',

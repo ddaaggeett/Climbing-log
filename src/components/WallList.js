@@ -33,6 +33,7 @@ export default class WallList extends Component {
         }
         return (
             <FlatList
+                style={styles.wallList}
                 data={this.props.user.walls}
                 renderItem={({item}) => (
                     <TouchableHighlight onPress={() => this.handlePressWall(item)}>

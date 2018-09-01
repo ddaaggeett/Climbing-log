@@ -5,7 +5,7 @@ import * as screens from './src/containers'
 import changefeedListeners from './src/db/changefeed-listeners'
 import { PersistGate } from 'redux-persist/integration/react'
 import configureStore from './src/redux-config/store';
-const store = configureStore().store
+export const store = configureStore().store
 const persistor = configureStore().persistor
 
 changefeedListeners(store)

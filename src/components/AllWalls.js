@@ -11,6 +11,9 @@ export default class AllWalls extends Component {
         super(props)
         console.log('JSON.stringify(this.props,null,4)',JSON.stringify(this.props,null,4))
     }
+    handleWallsTabPress() {
+        this.props.swapWallView('allWalls')
+    }
     render() {
         if(this.props.views.allWalls) {
             return (

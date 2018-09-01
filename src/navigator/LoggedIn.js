@@ -1,5 +1,7 @@
 import { TabNavigator } from 'react-navigation'
 import * as screens from '../containers'
+import { store } from '../../App'
+import { swapWallView } from '../actions/actionCreators'
 
 const LoggedInNavigator = TabNavigator({
 	user: {
@@ -12,6 +14,9 @@ const LoggedInNavigator = TabNavigator({
 		screen: screens.AllWalls,
 		navigationOptions: {
 			tabBarLabel: 'walls',
+			tabBarOnPress: () => {
+				store.dispatch(swapWallView('allWalls'))
+			},
 		},
 	}
 }, {
@@ -27,7 +32,7 @@ const LoggedInNavigator = TabNavigator({
 		},
 		activeTintColor: '#fff',
         inactiveTintColor: '#000',
-    },
+	},
 })
 
 export default LoggedInNavigator

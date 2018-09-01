@@ -31,7 +31,6 @@ export default class RockWall extends Component {
         if(this.props.user.walls != undefined) return (
             <View style={styles.container}>
                 <Text style={[styles.text,styles.wallID]}>{this.props.user.walls[0].id}</Text>
-                <Text style={styles.text}>Climber: {this.props.user.name}</Text>
                 <Text style={styles.text}>Succeeded?</Text>
                 <Switch onValueChange = {this.handleToggleWallSuccess}
                     value = {this.props.user.walls[0].succeeded} />
