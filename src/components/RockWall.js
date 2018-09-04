@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, TextInput, Switch } from 'react-native';
+import { Text, View, TextInput, Switch, ScrollView } from 'react-native';
 import * as actions from '../actions'
 import { styles } from '../styles'
 import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
@@ -9,10 +9,7 @@ const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketP
 export default class RockWall extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            setter: 'setterID',
-            grade: '',
-        }
+        this.state = {}
     }
     handleToggleWallSuccess = (value) => {
         const newUserInst = {
@@ -29,12 +26,15 @@ export default class RockWall extends Component {
     }
     render() {
         if(this.props.user.walls != undefined) return (
+            <ScrollView endFillColor={'#47515b'}>
             <View style={styles.container}>
                 <Text style={[styles.text,styles.wallID]}>{this.props.user.walls[0].id}</Text>
+                <Text style={[styles.text,styles.wallSubInfo]}>@ {this.props.user.walls[0].gym}</Text>
                 <Text style={styles.text}>Succeeded?</Text>
                 <Switch onValueChange = {this.handleToggleWallSuccess}
                     value = {this.props.user.walls[0].succeeded} />
             </View>
+            </ScrollView>
         )
         else return null // TODO: know how to render if props are not yet available (undefined)?
     }

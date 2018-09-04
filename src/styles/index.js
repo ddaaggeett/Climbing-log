@@ -32,6 +32,10 @@ export const styles = StyleSheet.create({
         textAlign: 'right',
         fontSize: 20,
     },
+    wallSubInfo: {
+        textAlign: 'left',
+        fontSize: 17,
+    },
     newHere: {
         textAlign: 'center',
         fontSize: 25,
@@ -41,5 +45,10 @@ export const styles = StyleSheet.create({
     climberName: {
         textAlign: 'right',
         fontSize: 25,
+    },
+    promptScan: {
+        textAlign: 'center',
+        fontSize: 20,
+        fontWeight: 'bold',
     },
 });

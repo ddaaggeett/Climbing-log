@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Linking } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableHighlight } from 'react-native';
 import * as actions from '../actions'
 import { findUserWallIndex } from '../logic'
 import { styles } from '../styles'
@@ -14,29 +14,28 @@ export default class QRScanner extends Component {
     }
 
     onSuccess(e) {
-        const wallID = e.data
+        const wall = JSON.parse(e.data)
+        const newWallObject = {
+            id: wall.id,
+            gym: wall.gym,
+            succeeded: false,
+        }
         var newUserInst = {}
         if(this.props.user.walls == undefined) { // first wall
             newUserInst = {
                 ...this.props.user,
                 walls: [
-                    {
-                        id: wallID,
-                        succeeded: false,
-                    }
+                    newWallObject
                 ],
             }
         }
         else { // not first wall
-            const userWallIndex = findUserWallIndex(wallID, this.props.user.walls)
+            const userWallIndex = findUserWallIndex(wall.id, this.props.user.walls)
             if(userWallIndex == null) { // wall doesn't exist yet - add to front
                 newUserInst = {
                     ...this.props.user,
                     walls: [
-                        {
-                            id: wallID,
-                            succeeded: false,
-                        },
+                        newWallObject,
                         ...this.props.user.walls,
                     ],
                 }
@@ -56,6 +55,10 @@ export default class QRScanner extends Component {
         this.props.swapWallView('singleWall')
     }
 
+    handleCancelScan() {
+        this.props.swapWallView('allWalls')
+    }
+
     render() {
         return (
             <QRCodeScanner
@@ -63,10 +66,12 @@ export default class QRScanner extends Component {
                 bottomViewStyle={styles.container}
                 onRead={this.onSuccess.bind(this)}
                 topContent={
-                    <Text style={styles.text}>Scan a wall's QR code</Text>
+                    <TouchableHighlight onPress={() => this.handleCancelScan()}>
+                    <Text style={[styles.text,styles.promptScan]}>CANCEL</Text>
+                    </TouchableHighlight>
                 }
                 bottomContent={
-                    <Text style={styles.text}>just hover the camera</Text>
+                    <Text style={[styles.text,styles.promptScan]}>Scan a wall's QR code{'\n'}(just hover the camera)</Text>
                 }
             />
         )
