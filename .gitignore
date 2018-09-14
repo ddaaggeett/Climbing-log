@@ -1,9 +1,10 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+.idea
+.gradle
+local.properties
+*.iml
 
-# expo
-.expo/
+npm-debug.log
 
-# dependencies
 /node_modules
 
 # misc
@@ -35,11 +36,24 @@ gradle-app.setting
 # Cache of project
 .gradletasknamecache
 
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-build
-android
-ios
-
 wiki
+
+# OSX
+.DS_Store
+
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
