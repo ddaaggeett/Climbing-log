@@ -15,7 +15,7 @@
     "babel-preset-stage-0": "^6.24.1"
   },
   "scripts": {
-    "server": "nodemon ./src/db",
+    "server": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js ./src/server",
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
