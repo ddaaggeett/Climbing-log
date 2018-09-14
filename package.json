@@ -5,8 +5,14 @@
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest-react-native": "^18.0.0",
-    "nodemon": "^1.18.3",
-    "react-test-renderer": "16.4.2"
+    "nodemon": "^1.18.4",
+    "react-test-renderer": "16.4.2",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^23.4.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1"
   },
   "scripts": {
     "server": "nodemon ./src/db",
@@ -19,15 +25,19 @@
     "preset": "react-native"
   },
   "dependencies": {
-    "auth0-js": "^9.7.3",
-    "concurrently": "^4.0.1",
     "config": "^2.0.1",
     "express": "^4.16.3",
     "immutable": "^3.8.2",
-    "react": "16.4.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-github": "^1.1.0",
+    "passport-google-oauth20": "^1.0.0",
+    "react": "^16.5.0",
     "react-native": "^0.55.0",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera",
     "react-native-qrcode-scanner": "^1.0.1",
+    "react-native-safari-view": "^2.1.0",
+    "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.12.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
