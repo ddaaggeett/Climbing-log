@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
 MERGED from [:react-native-camera] /Users/ddaaggeett/github/climbing/climblogger/node_modules/react-native-camera/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:2:1-18:12
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/d81cf32e08a1a1632a63dabf5e1419fb/AndroidManifest.xml:2:1-15:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:17:1-31:12
@@ -36,9 +36,9 @@ MERGED from [com.google.android.gms:play-services-basement-license:12.0.1] /User
 MERGED from [com.google.android.gms:play-services-vision-common-license:12.0.1] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/play-services-vision-common-license-12.0.1.aar/a3187e973e8a80f736eadf716a03f5f2/AndroidManifest.xml:17:1-24:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/dc0b93600687956f65ca7d9269448b0c/AndroidManifest.xml:17:1-30:12
 MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-12.0.1.aar/29a90dc616cd32274d1d04798c5cc318/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
-INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
+INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12
 	package
 		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:2:5-30
 		INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml
@@ -152,7 +152,7 @@ INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main
 		INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml
 application
-ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:15:5-32:19
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:15:5-38:19
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/d81cf32e08a1a1632a63dabf5e1419fb/AndroidManifest.xml:13:5-20
 MERGED from [com.facebook.react:react-native:0.55.4] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/react-native-0.55.4.aar/d81cf32e08a1a1632a63dabf5e1419fb/AndroidManifest.xml:13:5-20
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/6a8823b368557cbeac21ff16d66b445e/AndroidManifest.xml:25:5-29:19
@@ -212,7 +212,7 @@ MERGED from [com.google.android.gms:play-services-tasks-license:12.0.1] /Users/d
 	android:name
 		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:16:7-38
 activity#com.climbinglog.MainActivity
-ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:21:7-30:18
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:21:7-36:18
 	android:label
 		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:23:9-41
 	android:windowSoftInputMode
@@ -231,10 +231,30 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:28:13-73
 	android:name
 		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:28:23-70
-activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:31:7-84
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:login+data:scheme:climbinglog
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:30:9-35:25
+action#android.intent.action.VIEW
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:31:13-65
 	android:name
-		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:31:17-81
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:31:21-62
+category#android.intent.category.DEFAULT
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:32:13-72
+	android:name
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:32:23-69
+category#android.intent.category.BROWSABLE
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:33:13-74
+	android:name
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:33:23-71
+data
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:34:13-71
+	android:host
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:34:48-68
+	android:scheme
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:34:19-47
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:37:7-84
+	android:name
+		ADDED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:37:17-81
 uses-feature#android.hardware.camera
 ADDED from [:react-native-camera] /Users/ddaaggeett/github/climbing/climblogger/node_modules/react-native-camera/android/build/intermediates/manifests/full/debug/AndroidManifest.xml:11:5-13:36
 	android:required
@@ -286,11 +306,11 @@ ADDED from [com.google.android.gms:play-services-basement:12.0.1] /Users/ddaagge
 	android:name
 		ADDED from [com.google.android.gms:play-services-basement:12.0.1] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/play-services-basement-12.0.1.aar/971ec1f4c6500912909ea8678bce08f4/AndroidManifest.xml:24:13-58
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-34:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/ddaaggeett/github/climbing/climblogger/android/app/src/main/AndroidManifest.xml:1:1-40:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
 meta-data#android.arch.lifecycle.VERSION
 ADDED from [android.arch.lifecycle:runtime:1.0.0] /Users/ddaaggeett/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/dc0b93600687956f65ca7d9269448b0c/AndroidManifest.xml:25:9-27:47
 	android:value
