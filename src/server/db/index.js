@@ -3,10 +3,12 @@ import {
     db_port,
     db,
     tables,
-} from './config'
+} from '../config'
 import {
     server,
-} from '.'
+} from '../'
+var actions = require('../../actions')
+var changefeeds = require('./changefeeds')
 var r = require('rethinkdb')
 var dbConnx = null
 var io = require('socket.io')(server, {pingTimeout: 1})
@@ -36,7 +38,7 @@ r.connect({
     dbConnx = connection
 
 	io.sockets.on('connection', function (socket) {
-        /*
+
         // TODO: pull specific user data upon user name entry. currently overwrites any user name with current user data loaded in redux.
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
@@ -60,7 +62,6 @@ r.connect({
 
         // RethinkDB changefeed
         r.table(tables.users).changes({ includeInitial: true, squash: true }).run(connection).then(changefeeds.changefeeds(socket))
-        */
 	})
 })
 .error(function(error) {

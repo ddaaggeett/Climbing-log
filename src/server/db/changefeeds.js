@@ -1,7 +1,7 @@
 /*
 RethinkDB changefeed logic
 */
-var actions = require('../actions')
+var actions = require('../../actions')
 
 const changefeeds = function(socket) {
 
