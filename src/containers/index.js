@@ -1,3 +1,3 @@
 export User from './User'
-export Main from './Main'
+export Login from './Login'
 export AllWalls from './AllWalls'

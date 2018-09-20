@@ -3,7 +3,7 @@ import * as screens from '../containers'
 
 const LoggedOutNavigator = createStackNavigator({
 	main: {
-		screen: screens.Main,
+		screen: screens.Login,
 	},
 }, {
     navigationOptions: {
