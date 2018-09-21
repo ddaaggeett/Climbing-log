@@ -4,9 +4,12 @@ import * as actions from '../actions'
 import { styles } from '../styles'
 import { findUserWallIndex } from '../logic'
 import QRScanner from './QRScanner'
-import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
+import {
+    serverIP,
+    serverPort,
+} from '../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
+const socket = io.connect('http://' + serverIP + ':' + serverPort)
 
 export default class WallList extends Component {
     constructor(props) {

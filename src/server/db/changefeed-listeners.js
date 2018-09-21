@@ -4,9 +4,12 @@ handles redux action dispathes
 */
 import * as actions from '../../actions'
 import * as actionCreators from '../../actions/actionCreators'
-import rnConfig from '../../../config/rnConfig'
+import {
+    serverIP,
+    serverPort,
+} from '../../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
+const socket = io.connect('http://' + serverIP + ':' + serverPort)
 
 function dispatchRedux(changefeedType, store, object) {
     if(object.id === store.getState().user.id) { // ensure changefeed equals the user on client device // TODO: user authentication instead!

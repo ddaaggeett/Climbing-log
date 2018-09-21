@@ -3,7 +3,7 @@ import {
     db_port,
     db,
     tables,
-} from '../config'
+} from '../../config'
 import {
     server,
 } from '../'

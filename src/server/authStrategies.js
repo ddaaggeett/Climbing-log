@@ -2,7 +2,7 @@ import GitHubStrategy from 'passport-github'
 import {
     github,
     tables,
-} from './config'
+} from '../config'
 import {
     passport,
 } from '.'

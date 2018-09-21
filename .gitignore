@@ -18,9 +18,7 @@ yarn-debug.log*
 yarn-error.log*
 
 rethinkdb_data
-config/*
-!config/default*
-!config/rnConfig*
+src/config
 
 qrcodes
 

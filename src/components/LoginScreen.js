@@ -14,9 +14,12 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import SafariView from 'react-native-safari-view'
 import * as actions from '../actions'
 import { styles, iconStyles } from '../styles'
-import rnConfig from '../../config/rnConfig' // TODO: use a single source for configs
+import {
+    serverIP,
+    serverPort,
+} from '../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + rnConfig.serverIP + ':' + rnConfig.socketPort)
+const socket = io.connect('http://' + serverIP + ':' + serverPort)
 
 export default class LoginScreen extends Component {
     constructor() {
