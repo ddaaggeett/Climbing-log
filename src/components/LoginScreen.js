@@ -46,11 +46,9 @@ export default class LoginScreen extends Component {
     handleOpenURL = ({ url }) => {
         // Extract stringified user string out of the URL
         const [, user_string] = url.match(/user=([^#]+)/)
-        this.setState({
-            // Decode the user string and parse it into JSON
-            user: JSON.parse(decodeURI(user_string))
-        }, () => {
-            console.log('user is set\n' + JSON.stringify(this.state.user,null,4))
+        const user = JSON.parse(decodeURI(user_string))
+        this.setState({ // TODO: use redux instead
+            user: user
         })
         if (Platform.OS === 'ios') {
             SafariView.dismiss()
@@ -74,7 +72,7 @@ export default class LoginScreen extends Component {
             Linking.openURL(url)
         }
     }
-
+/*
     handleChangeUserID(text) {
         this.props.alterLoginName(text)
     }
@@ -87,10 +85,9 @@ export default class LoginScreen extends Component {
         socket.emit(actions.UPDATE_USER_INST, newUserInst) // DB + Redux
         this.props.navigation.navigate('user')
     }
-
+*/
     render() {
-        const { user } = this.state
-		if(!user) return ( // not logged in
+		if(!this.state.user) return ( // not logged in
             <ScrollView endFillColor={'#47515b'}>
             <View style={styles.container}>
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
@@ -111,7 +108,7 @@ export default class LoginScreen extends Component {
             </ScrollView>
 		)
 		else { // logged in
-			socket.emit(actions.UPDATE_USER_INST, user) // DB + Redux
+			socket.emit(actions.UPDATE_USER_INST, this.state.user)
 	        this.props.navigation.navigate('user')
 			return null
 		}

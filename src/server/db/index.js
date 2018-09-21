@@ -37,9 +37,8 @@ r.connect({
 
     dbConnx = connection
 
-	io.sockets.on('connection', function (socket) {
+	io.sockets.on('connection', function (socket) { // TODO: client not connecting for some reason
 
-        // TODO: pull specific user data upon user name entry. currently overwrites any user name with current user data loaded in redux.
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
                 r.table(tables.users).get(newUserInst.id).update(newUserInst).run(connection)
