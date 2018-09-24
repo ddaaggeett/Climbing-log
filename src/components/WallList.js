@@ -6,10 +6,10 @@ import { findUserWallIndex } from '../logic'
 import QRScanner from './QRScanner'
 import {
     serverIP,
-    serverPort,
+    socketPort,
 } from '../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + serverIP + ':' + serverPort)
+const socket = io.connect('http://' + serverIP + ':' + socketPort)
 
 export default class WallList extends Component {
     constructor(props) {

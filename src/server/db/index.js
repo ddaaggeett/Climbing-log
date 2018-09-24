@@ -1,17 +1,15 @@
 import {
+    socketPort,
     db_host,
     db_port,
     db,
     tables,
 } from '../../config'
-import {
-    server,
-} from '../'
 var actions = require('../../actions')
 var changefeeds = require('./changefeeds')
 var r = require('rethinkdb')
 var dbConnx = null
-var io = require('socket.io')(server, {pingTimeout: 1})
+var io = require('socket.io').listen(socketPort)
 
 r.connect({
     host: db_host,
@@ -37,7 +35,7 @@ r.connect({
 
     dbConnx = connection
 
-	io.sockets.on('connection', function (socket) { // TODO: client not connecting for some reason
+	io.on('connection', function (socket) {
 
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {

@@ -4,6 +4,9 @@ import {
     r,
     dbConnx,
 } from './db'
+import {
+    serverPort,
+} from '../config'
 
 // Serialize user into the sessions
 passport.serializeUser((user, done) => { // happens after user is inserted into DB
@@ -27,8 +30,8 @@ const app = express()
 app.use(passport.initialize())
 app.use(passport.session())
 
-// Launch the server on the port 3000
-const server = app.listen(3000, () => {
+// Launch the server on the serverPort
+const server = app.listen(serverPort, () => {
     const { address, port } = server.address()
     console.log(`Listening at http://${address}:${port}`)
 })

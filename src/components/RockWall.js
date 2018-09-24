@@ -4,10 +4,10 @@ import * as actions from '../actions'
 import { styles } from '../styles'
 import {
     serverIP,
-    serverPort,
+    socketPort,
 } from '../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + serverIP + ':' + serverPort)
+const socket = io.connect('http://' + serverIP + ':' + socketPort)
 
 export default class RockWall extends Component {
     constructor(props) {

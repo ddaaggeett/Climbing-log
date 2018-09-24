@@ -6,10 +6,10 @@ import * as actions from '../../actions'
 import * as actionCreators from '../../actions/actionCreators'
 import {
     serverIP,
-    serverPort,
+    socketPort,
 } from '../../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + serverIP + ':' + serverPort)
+const socket = io.connect('http://' + serverIP + ':' + socketPort)
 
 function dispatchRedux(changefeedType, store, object) {
     if(object.id === store.getState().user.id) { // ensure changefeed equals the user on client device // TODO: user authentication instead!

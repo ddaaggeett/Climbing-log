@@ -6,10 +6,10 @@ import { styles } from '../styles'
 import QRCodeScanner from 'react-native-qrcode-scanner'
 import {
     serverIP,
-    serverPort,
+    socketPort,
 } from '../config'
 import io from 'socket.io-client/dist/socket.io'
-const socket = io.connect('http://' + serverIP + ':' + serverPort)
+const socket = io.connect('http://' + serverIP + ':' + socketPort)
 
 export default class QRScanner extends Component {
     constructor(props) {

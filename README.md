@@ -1,5 +1,6 @@
-# Climbing-log
-Allow an indoor rock climber to log climbed routes, comment, and share to others
+# climblogger
+
+indoor rock climbing app
 _____________________________________________
 
 # development participation
