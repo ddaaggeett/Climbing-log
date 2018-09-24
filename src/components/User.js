@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import { Text, View, Button, ScrollView } from 'react-native';
+import {
+    Text,
+    View,
+    Button,
+    ScrollView,
+    Image,
+} from 'react-native';
 import { styles } from '../styles'
+import { stylesUser } from '../styles/user'
 
 export default class User extends Component {
     constructor(props) {
@@ -10,7 +17,12 @@ export default class User extends Component {
         return (
             <ScrollView endFillColor={'#47515b'}>
             <View style={styles.container}>
-                <Text style={[styles.text,styles.climberName]}>{this.props.user.id}</Text>
+                <View style={stylesUser.userIDBar}>
+                    <Image source={{ uri: this.props.user.avatar }} style={stylesUser.avatarImage} />
+                    <View style={stylesUser.climberNameView}>
+                        <Text style={[styles.text,stylesUser.climberName]}>{this.props.user.name}</Text>
+                    </View>
+                </View>
             </View>
             </ScrollView>
         )

@@ -42,13 +42,9 @@ export const styles = StyleSheet.create({
         paddingTop:20,
         paddingBottom:20,
     },
-    climberName: {
-        textAlign: 'right',
-        fontSize: 25,
-    },
     promptScan: {
         textAlign: 'center',
         fontSize: 20,
         fontWeight: 'bold',
     },
-});
+})
