@@ -111,7 +111,8 @@ export default class LoginScreen extends Component {
             </ScrollView>
 		)
 		else { // logged in
-			socket.emit(actions.UPDATE_USER_INST, this.state.user)
+			// socket.emit(actions.UPDATE_USER_INST, this.state.user)
+            this.props.updateUserInst(this.state.user) // rethinkdb already handled with auth, so changefeed doesn't fire -> so redux directly
 	        this.props.navigation.navigate('user')
 			return null
 		}
