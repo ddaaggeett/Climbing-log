@@ -13,7 +13,8 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome'
 import SafariView from 'react-native-safari-view'
 import * as actions from '../actions'
-import { styles, iconStyles } from '../styles'
+import { styles } from '../styles'
+import { stylesAuth, iconStyles } from '../styles/auth'
 import {
     serverIP,
     socketPort,
@@ -58,8 +59,9 @@ export default class LoginScreen extends Component {
         }
     }
 
-    // Handle Login with Github button tap
     loginWithGithub = () => this.openURL('http://localhost:3000/auth/github')
+    loginWithFacebook = () => this.openURL('http://localhost:3000/auth/facebook')
+    loginWithGoogle = () => this.openURL('http://localhost:3000/auth/google')
 
     // Open URL in a browser
     openURL = (url) => {
@@ -96,9 +98,27 @@ export default class LoginScreen extends Component {
                 <Image style={styles.cover_image} source={require('../assets/img/rockwall-misc.png')} />
                 <Text style={[styles.text, styles.appName]}>climblogger</Text>
                 <Text style={styles.text}>your climbing extravaganza on record</Text>
-                    <View style={styles.buttons}>
+                <View style={stylesAuth.auth_buttons}>
+                    <View
+                        style={stylesAuth.login_button}
+                        ><Icon.Button
+                        name="facebook"
+                        backgroundColor="#3b5998"
+                        onPress={this.loginWithFacebook}
+                        {...iconStyles} >
+                        Login with Facebook
+                    </Icon.Button></View>
+                    <View
+                        style={stylesAuth.login_button}
+                        ><Icon.Button
+                        name="google"
+                        backgroundColor="#DD4B39"
+                        onPress={this.loginWithGoogle}
+                        {...iconStyles} >
+                        Login with Google
+                    </Icon.Button></View>
                         <View
-                          style={styles.login_button}
+                          style={stylesAuth.login_button}
                           ><Icon.Button
                           name="github"
                           backgroundColor="gray"
@@ -106,7 +126,7 @@ export default class LoginScreen extends Component {
                           {...iconStyles} >
                           Login with Github
                         </Icon.Button></View>
-      			  </View>
+                </View>
             </View>
             </ScrollView>
 		)
