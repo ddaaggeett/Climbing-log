@@ -1,6 +1,8 @@
 import GitHubStrategy from 'passport-github'
+import GoogleStrategy from 'passport-google-oauth20'
 import {
     github,
+    google,
     tables,
 } from '../config'
 import {
@@ -16,7 +18,7 @@ const loginCallbackHandler = function (objectMapper, type) {
         var newUserInst = objectMapper(profile)
         if (accessToken !== null) {
             r.table(tables.users)
-                .getAll(profile.username, { index: 'username' }) // TODO: or 'email' - whichever secondary index is decided to be unique per user
+                .getAll(newUserInst.username, { index: 'username' }) // TODO: or 'email' - whichever secondary index is decided to be unique per user
                 .filter({ type: type })
                 .run(dbConnx)
                 .then(function (cursor) {
@@ -56,4 +58,18 @@ passport.use(new GitHubStrategy(
             'type': profile.provider
         }
     }, 'github')
+))
+
+passport.use(new GoogleStrategy(
+    google,
+    loginCallbackHandler(function (profile) {
+        console.log(JSON.stringify(profile,null,2))
+        return {
+            'username': profile._json.nickname,
+            'name': profile.displayName || null,
+            'url': profile._json.url,
+            'avatar': profile._json.image.url,
+            'type': profile.provider
+        }
+    }, 'google')
 ))

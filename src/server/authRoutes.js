@@ -11,3 +11,12 @@ app.get(
         res.redirect('climbinglog://login?user=' + JSON.stringify(req.user))
     }
 )
+
+app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
+app.get(
+    '/auth/google/callback',
+    passport.authenticate('google', { failureRedirect: '/auth/google' }),
+    (req, res) => {
+        res.redirect('climbinglog://login?user=' + JSON.stringify(req.user))
+    }
+)
