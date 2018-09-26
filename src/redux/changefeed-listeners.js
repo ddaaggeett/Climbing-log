@@ -2,12 +2,12 @@
 RethinkDB changefeed changefeedListeners
 handles redux action dispathes
 */
-import * as actions from '../../actions'
-import * as actionCreators from '../../actions/actionCreators'
+import * as actions from '../actions'
+import * as actionCreators from '../actions/actionCreators'
 import {
     serverIP,
     socketPort,
-} from '../../config'
+} from '../config'
 import io from 'socket.io-client/dist/socket.io'
 const socket = io.connect('http://' + serverIP + ':' + socketPort)
 

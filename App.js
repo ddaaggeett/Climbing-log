@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import { getRootNavigator } from './src/navigator'
 import * as screens from './src/containers'
-import changefeedListeners from './src/server/db/changefeed-listeners'
+import changefeedListeners from './src/redux/changefeed-listeners'
 import { PersistGate } from 'redux-persist/integration/react'
-import configureStore from './src/redux-config/store';
+import configureStore from './src/redux/store';
 export const store = configureStore().store
 const persistor = configureStore().persistor
 
