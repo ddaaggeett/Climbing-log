@@ -5,8 +5,12 @@ import {
     db,
     tables,
 } from '../../config'
+import {
+    userChangefeeds,
+    imageChangefeeds,
+    wallChangefeeds,
+} from './changefeeds'
 var actions = require('../../actions')
-var changefeeds = require('./changefeeds')
 var r = require('rethinkdb')
 var dbConnx = null
 var io = require('socket.io').listen(socketPort)
@@ -65,7 +69,9 @@ r.connect({
         })
 
         // RethinkDB changefeed
-        r.table(tables.users).changes({ includeInitial: true, squash: true }).run(connection).then(changefeeds.changefeeds(socket))
+        r.table(tables.users).changes({ includeInitial: true, squash: true }).run(connection).then(userChangefeeds(socket))
+        r.table(tables.images).changes().run(connection).then(imageChangefeeds(connection))
+        r.table(tables.walls).changes().run(connection).then(wallChangefeeds(connection))
 	})
 })
 .error(function(error) {
