@@ -4,6 +4,7 @@ const initialState = {
 	allWalls: true,
 	scanner: false,
 	singleWall: false,
+	wallCamera: false,
 }
 
 export default function views(state = initialState, action) {
@@ -16,6 +17,7 @@ export default function views(state = initialState, action) {
 					allWalls: true,
 					scanner: false,
 					singleWall: false,
+					wallCamera: false,
 				}
 			}
 			else if(action.view === 'scanner') {
@@ -24,6 +26,7 @@ export default function views(state = initialState, action) {
 					allWalls: false,
 					scanner: true,
 					singleWall: false,
+					wallCamera: false,
 				}
 			}
 			else if(action.view === 'singleWall') {
@@ -32,6 +35,16 @@ export default function views(state = initialState, action) {
 					allWalls: false,
 					scanner: false,
 					singleWall: true,
+					wallCamera: false,
+				}
+			}
+			else if(action.view === 'wallCamera') {
+				return {
+					...state,
+					allWalls: false,
+					scanner: false,
+					singleWall: false,
+					wallCamera: true,
 				}
 			}
 

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const stylesAuth = StyleSheet.create({
     auth_buttons: {
@@ -12,7 +12,6 @@ export const stylesAuth = StyleSheet.create({
         marginLeft: 60,
     },
 })
-
 
 export const iconStyles = {
     borderRadius: 10,

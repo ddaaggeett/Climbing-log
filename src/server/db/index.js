@@ -37,6 +37,13 @@ r.connect({
 
 	io.on('connection', function (socket) {
 
+        socket.on('newWallImage',(newImageObject) => {
+            r.table(tables.images).insert(newImageObject).run(connection).catch((error) => {
+                console.log('ERROR inserting image')
+                console.log(error)
+            })
+        })
+
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
                 r.table(tables.users).get(newUserInst.id).update(newUserInst).run(connection)

@@ -5,6 +5,7 @@ import { styles } from '../styles'
 import WallList from './WallList'
 import QRScanner from './QRScanner'
 import RockWall from './RockWall'
+import WallCamera from './WallCamera'
 
 export default class AllWalls extends Component {
     constructor(props) {
@@ -27,6 +28,11 @@ export default class AllWalls extends Component {
         else if(this.props.views.singleWall) {
             return (
                 <RockWall {...this.props} />
+            )
+        }
+        else if(this.props.views.wallCamera) {
+            return (
+                <WallCamera {...this.props} />
             )
         }
     }

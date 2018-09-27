@@ -1,5 +1,12 @@
-import React, { Component } from 'react';
-import { Text, View, TextInput, Switch, ScrollView } from 'react-native';
+import React, { Component } from 'react'
+import {
+    Text,
+    View,
+    TextInput,
+    Switch,
+    ScrollView,
+    Button,
+} from 'react-native'
 import * as actions from '../actions'
 import { styles } from '../styles'
 import {
@@ -36,6 +43,7 @@ export default class RockWall extends Component {
                 <Text style={styles.text}>Succeeded?</Text>
                 <Switch onValueChange = {this.handleToggleWallSuccess}
                     value = {this.props.user.walls[0].succeeded} />
+                <Button title="capture wall photo" onPress={() => this.props.swapWallView('wallCamera')} />
             </View>
             </ScrollView>
         )
