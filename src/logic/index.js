@@ -6,3 +6,22 @@ export const findUserWallIndex = (wallID, walls) => {
         }
     }
 }
+
+export const getRecentWallClimberArray = (climberID, climbers) => {
+    var wallClimberArray = []
+    for(var x = 0; x < climbers.length; x++) {
+        if (climbers[x] == climberID) {
+            return [
+                climbers[x],
+                ...climbers.slice(0, x),
+                ...climbers.slice(x + 1),
+            ]
+        }
+        else if((x == climbers.length - 1) && (climbers[x] != climberID)) {
+            return [
+                climberID,
+                ...climbers,
+            ]
+        }
+    }
+}

@@ -63,7 +63,6 @@ passport.use(new GitHubStrategy(
 passport.use(new GoogleStrategy(
     google,
     loginCallbackHandler(function (profile) {
-        console.log(JSON.stringify(profile,null,2))
         return {
             'username': profile._json.nickname,
             'name': profile.displayName || null,

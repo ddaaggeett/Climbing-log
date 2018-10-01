@@ -16,9 +16,20 @@ export default class QRScanner extends Component {
         super(props)
     }
 
+    handleWallScan(wall) {
+        const scanObject = {
+            id: wall.id,
+            climber_id: this.props.user.id,
+        }
+
+        socket.emit('wallScan', scanObject)
+    }
+
     onSuccess(e) {
         const wall = JSON.parse(e.data)
-        const newWallObject = {
+        this.handleWallScan(wall)
+
+        const newWallObject = { //  TODO: handle with this.handleWallScan()
             id: wall.id,
             gym: wall.gym,
             succeeded: false,

@@ -10,6 +10,9 @@ import {
     imageChangefeeds,
     wallChangefeeds,
 } from './changefeeds'
+import {
+    handleWallScan,
+} from './dataStructure'
 var actions = require('../../actions')
 var r = require('rethinkdb')
 var dbConnx = null
@@ -41,12 +44,7 @@ r.connect({
 
 	io.on('connection', function (socket) {
 
-        socket.on('newWallImage',(newImageObject) => {
-            r.table(tables.images).insert(newImageObject).run(connection).catch((error) => {
-                console.log('ERROR inserting image')
-                console.log(error)
-            })
-        })
+        socket.on('wallScan', (wallObject) => handleWallScan(wallObject, connection))
 
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
