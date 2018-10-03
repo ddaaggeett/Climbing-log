@@ -1,20 +1,24 @@
 import {
     getRecentWallClimberArray,
+    getNewImageArray,
 } from '../../logic'
 import {
     tables,
 } from '../../config'
+import {
+    dbConnx,
+} from '.'
 var r = require('rethinkdb')
 
-export const handleWallScan = (scanObject, connx) => {
-    r.table(tables.walls).get(scanObject.id).run(connx)
+export const handleWallScan = (scanObject) => {
+    r.table(tables.walls).get(scanObject.id).run(dbConnx)
     .then(currentWallObject => {
         const recentWallClimberArray = getRecentWallClimberArray(scanObject.climber_id, currentWallObject.climbers)
         const newWallObject = {
             ...currentWallObject,
             climbers: recentWallClimberArray,
         }
-        r.table(tables.walls).update(newWallObject).run(connx)
+        r.table(tables.walls).update(newWallObject).run(dbConnx)
         //  TODO: .then() update UserInst of climbers[0] - take data logic out of QRScanner.js
     })
     .catch(error => {
@@ -25,6 +29,47 @@ export const handleWallScan = (scanObject, connx) => {
                 scanObject.climber_id,
             ]
         }
-        r.table(tables.walls).insert(wallObject).run(connx)
+        r.table(tables.walls).insert(wallObject).run(dbConnx)
     })
+}
+
+export const handleImageInsert = (newImageObject) => {
+    r.table(tables.images).insert(newImageObject).run(dbConnx)
+    .then(data => {
+        const newImageID = data.generated_keys[0]
+        getWallObject(newImageID)
+        .then(wallObject => {
+            newImageToWall(newImageID, wallObject)
+        })
+    })
+    .catch((error) => {
+        console.log('ERROR inserting image')
+        console.log(error)
+    })
+}
+
+const getWallObject = (imageID) => {
+    return new Promise((resolve, reject) => {
+        r.table(tables.images).get(imageID).run(dbConnx)
+        .then(data => {
+            const wallID = data.wall_id
+            r.table(tables.walls).get(wallID).run(dbConnx)
+            .then(currentWallObject => {
+                resolve(currentWallObject)
+            })
+        })
+        .catch((error) => {
+            console.log('ERROR getting wall data')
+            console.log(error)
+        })
+    })
+}
+
+const newImageToWall = (newImageID, wallObject) => {
+    const newWallObject = {
+        ...wallObject,
+        images: getNewImageArray(newImageID, wallObject),
+    }
+    r.table(tables.walls).update(newWallObject).run(dbConnx)
+    //  TODO: .then()
 }

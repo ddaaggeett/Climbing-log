@@ -8,7 +8,6 @@ export const findUserWallIndex = (wallID, walls) => {
 }
 
 export const getRecentWallClimberArray = (climberID, climbers) => {
-    var wallClimberArray = []
     for(var x = 0; x < climbers.length; x++) {
         if (climbers[x] == climberID) {
             return [
@@ -24,4 +23,16 @@ export const getRecentWallClimberArray = (climberID, climbers) => {
             ]
         }
     }
+}
+
+export const getNewImageArray = (newImageID, wallObject) => {
+    if(wallObject.images == undefined) {
+        return [
+            newImageID
+        ]
+    }
+    else return [
+        newImageID,
+        ...wallObject.images
+    ]
 }

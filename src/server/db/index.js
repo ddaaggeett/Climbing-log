@@ -11,6 +11,7 @@ import {
     wallChangefeeds,
 } from './changefeeds'
 import {
+    handleImageInsert,
     handleWallScan,
 } from './dataStructure'
 var actions = require('../../actions')
@@ -44,14 +45,9 @@ r.connect({
 
 	io.on('connection', function (socket) {
 
-        socket.on('wallScan', (wallObject) => handleWallScan(wallObject, connection))
+        socket.on('wallScan', (wallObject) => handleWallScan(wallObject))
 
-        socket.on('newWallImage',(newImageObject) => {
-            r.table(tables.images).insert(newImageObject).run(connection).catch((error) => {
-                console.log('ERROR inserting image')
-                console.log(error)
-            })
-        })
+        socket.on('newWallImage', (newImageObject) => handleImageInsert(newImageObject))
 
         socket.on(actions.UPDATE_USER_INST, function(newUserInst) {
             try {
