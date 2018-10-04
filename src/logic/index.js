@@ -36,3 +36,41 @@ export const getNewImageArray = (newImageID, wallObject) => {
         ...wallObject.images
     ]
 }
+
+export const getNewUserInstOnWallChange = (userObject, wallID) => {
+    const newWallObjectForUser = {
+    	id: wallID,
+    	succeeded: false,
+    }
+    var newUserInst = {}
+    if(userObject.walls == undefined) { // first wall
+    	return {
+    		...userObject,
+    		walls: [
+    			newWallObjectForUser
+    		],
+    	}
+    }
+    else { // not first wall
+    	const userWallIndex = findUserWallIndex(wallID, userObject.walls)
+    	if(userWallIndex == null) { // wall doesn't exist yet - add to front
+    		return {
+    			...userObject,
+    			walls: [
+    				newWallObjectForUser,
+    				...userObject.walls,
+    			],
+    		}
+    	}
+    	else { // wall exists, update to front
+    		return {
+    			...userObject,
+    			walls: [
+    				userObject.walls[userWallIndex],
+    				...userObject.walls.slice(0, userWallIndex),
+    				...userObject.walls.slice(userWallIndex + 1),
+    			],
+    		}
+    	}
+    }
+}

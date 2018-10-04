@@ -4,6 +4,13 @@ RethinkDB changefeed logic
 import {
 	tables,
 } from '../../config'
+import {
+	getUserObjectOnWallChange,
+	handleUpdateUserInst,
+} from './dataStructure'
+import {
+	getNewUserInstOnWallChange,
+} from '../../logic'
 var r = require('rethinkdb')
 var actions = require('../../actions')
 
@@ -28,7 +35,7 @@ export const userChangefeeds = (socket) => {
 }
 
 //	TODO: update walls with images
-export const imageChangefeeds = (dbConnx) => {
+export const imageChangefeeds = (socket) => {
 
 	return function(rows) {
 		rows.each(function(err, row) {
@@ -49,8 +56,7 @@ export const imageChangefeeds = (dbConnx) => {
 	}
 }
 
-//	TODO: update userInstance with walls
-export const wallChangefeeds = (dbConnx) => {
+export const wallChangefeeds = (socket) => {
 
 	return function(rows) {
 		rows.each(function(err, row) {
@@ -58,16 +64,27 @@ export const wallChangefeeds = (dbConnx) => {
 				return console.log(err)
 			}
 			else if (row.new_val && !row.old_val) {	//	insert
-				console.log('wall inserted')
-				// socket.emit('imageToWall', row.new_val)
+				const userID = row.new_val.climbers[0]
+				const wallID = row.new_val.id
+				getUserObjectOnWallChange(wallID, userID)
+				.then(userObject => {
+					const newUserInst = getNewUserInstOnWallChange(userObject, wallID)
+					handleUpdateUserInst(newUserInst)
+				})
 			}
 			else if (row.new_val && row.old_val) {	//	edit
-				console.log('wall edited')
-				// socket.emit('imageToWall', row.new_val)
+				const userID = row.new_val.climbers[0]
+				const wallID = row.new_val.id
+				getUserObjectOnWallChange(wallID, userID)
+				.then(userObject => {
+					const newUserInst = getNewUserInstOnWallChange(userObject, wallID)
+					handleUpdateUserInst(newUserInst)
+				})
 			}
 			else if (row.old_val && !row.new_val) {	//	delete
 				// socket.emit('imageToWall', row.old_val)
 			}
 		})
 	}
+
 }

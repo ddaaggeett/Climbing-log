@@ -73,3 +73,23 @@ const newImageToWall = (newImageID, wallObject) => {
     r.table(tables.walls).update(newWallObject).run(dbConnx)
     //  TODO: .then()
 }
+
+export const getUserObjectOnWallChange = (wallID, userID) => {
+    return new Promise((resolve, reject) => {
+        r.table(tables.users).get(userID).run(dbConnx)
+        .then(userObject => {
+            resolve(userObject)
+        })
+        .catch(error => {
+            console.log('ERROR getUserObjectOnWallChange()')
+            console.log(error)
+        })
+    })
+}
+
+export const handleUpdateUserInst = (newUserInst) => {
+    r.table(tables.users).update(newUserInst).run(dbConnx)
+    .catch(error => {
+        r.table(tables.users).insert(newUserInst).run(dbConnx)
+    })
+}

@@ -21,51 +21,13 @@ export default class QRScanner extends Component {
             id: wall.id,
             climber_id: this.props.user.id,
         }
-
         socket.emit('wallScan', scanObject)
     }
 
     onSuccess(e) {
+        //  TODO: QR code is to contain url to app store in addition to wall info
         const wall = JSON.parse(e.data)
         this.handleWallScan(wall)
-
-        const newWallObject = { //  TODO: handle with this.handleWallScan()
-            id: wall.id,
-            gym: wall.gym,
-            succeeded: false,
-        }
-        var newUserInst = {}
-        if(this.props.user.walls == undefined) { // first wall
-            newUserInst = {
-                ...this.props.user,
-                walls: [
-                    newWallObject
-                ],
-            }
-        }
-        else { // not first wall
-            const userWallIndex = findUserWallIndex(wall.id, this.props.user.walls)
-            if(userWallIndex == null) { // wall doesn't exist yet - add to front
-                newUserInst = {
-                    ...this.props.user,
-                    walls: [
-                        newWallObject,
-                        ...this.props.user.walls,
-                    ],
-                }
-            }
-            else { // wall exists, update to front
-                newUserInst = {
-                    ...this.props.user,
-                    walls: [
-                        this.props.user.walls[userWallIndex],
-                        ...this.props.user.walls.slice(0, userWallIndex),
-                        ...this.props.user.walls.slice(userWallIndex + 1),
-                    ],
-                }
-            }
-        }
-        socket.emit(actions.UPDATE_USER_INST, newUserInst)
         this.props.swapWallView('singleWall')
     }
 

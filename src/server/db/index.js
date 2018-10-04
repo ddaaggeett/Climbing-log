@@ -71,8 +71,8 @@ r.connect({
 
         // RethinkDB changefeed
         r.table(tables.users).changes({ includeInitial: true, squash: true }).run(connection).then(userChangefeeds(socket))
-        r.table(tables.images).changes().run(connection).then(imageChangefeeds(connection))
-        r.table(tables.walls).changes().run(connection).then(wallChangefeeds(connection))
+        r.table(tables.images).changes().run(connection).then(imageChangefeeds(socket))
+        r.table(tables.walls).changes().run(connection).then(wallChangefeeds(socket))
 	})
 })
 .error(function(error) {
