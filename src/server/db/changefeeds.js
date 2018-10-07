@@ -64,22 +64,10 @@ export const wallChangefeeds = (socket) => {
 				return console.log(err)
 			}
 			else if (row.new_val && !row.old_val) {	//	insert
-				const userID = row.new_val.climbers[0]
-				const wallID = row.new_val.id
-				getUserObjectOnWallChange(wallID, userID)
-				.then(userObject => {
-					const newUserInst = getNewUserInstOnWallChange(userObject, wallID)
-					handleUpdateUserInst(newUserInst)
-				})
+				updatedWallChange(row)
 			}
 			else if (row.new_val && row.old_val) {	//	edit
-				const userID = row.new_val.climbers[0]
-				const wallID = row.new_val.id
-				getUserObjectOnWallChange(wallID, userID)
-				.then(userObject => {
-					const newUserInst = getNewUserInstOnWallChange(userObject, wallID)
-					handleUpdateUserInst(newUserInst)
-				})
+				updatedWallChange(row)
 			}
 			else if (row.old_val && !row.new_val) {	//	delete
 				// socket.emit('imageToWall', row.old_val)
@@ -87,4 +75,14 @@ export const wallChangefeeds = (socket) => {
 		})
 	}
 
+}
+
+const updatedWallChange = (row) => {
+	const userID = row.new_val.climbers[0]
+	const wallID = row.new_val.id
+	getUserObjectOnWallChange(wallID, userID)
+	.then(userObject => {
+		const newUserInst = getNewUserInstOnWallChange(userObject, wallID)
+		handleUpdateUserInst(newUserInst)
+	})
 }

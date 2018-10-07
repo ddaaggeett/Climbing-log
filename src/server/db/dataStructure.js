@@ -13,10 +13,9 @@ var r = require('rethinkdb')
 export const handleWallScan = (scanObject) => {
     r.table(tables.walls).get(scanObject.id).run(dbConnx)
     .then(currentWallObject => {
-        const recentWallClimberArray = getRecentWallClimberArray(scanObject.climber_id, currentWallObject.climbers)
         const newWallObject = {
             ...currentWallObject,
-            climbers: recentWallClimberArray,
+            climbers: getRecentWallClimberArray(scanObject.climber_id, currentWallObject.climbers),
         }
         r.table(tables.walls).update(newWallObject).run(dbConnx)
         //  TODO: .then() update UserInst of climbers[0] - take data logic out of QRScanner.js
