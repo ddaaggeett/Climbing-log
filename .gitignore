@@ -19,7 +19,7 @@ yarn-error.log*
 
 rethinkdb_data
 src/config
-
+gradle.properties
 qrcodes
 
 .gradle
